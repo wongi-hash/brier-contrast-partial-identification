@@ -1,0 +1,30 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# NEVER commit patient-level / raw data
+uploads/
+*_raw*/
+*raw_patient*/
+
+# scratch dirs
+*_scratch/
+
+# large per-replicate simulation checkpoints (regenerate via runners)
+**/checkpoint_*.json
+**/ckpt_*.json
+**/task_e*_logs/
+**/task_b*_logs/
+
+# restricted application inputs are never public
+**/restricted_inputs/
+**/honest_split_inputs*/
+**/analysis_matrix*.csv
+**/target_*.csv
+**/calibration_*.csv
+
+# local provenance and packaging scratch
+*.pid
+*.log
+*.zip

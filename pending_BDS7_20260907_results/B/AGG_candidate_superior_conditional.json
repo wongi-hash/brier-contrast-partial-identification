@@ -1,0 +1,41 @@
+{
+  "regime": "candidate_superior",
+  "cens": "conditional",
+  "n": 1000,
+  "oracle": "retain",
+  "dRT_true": -0.0144,
+  "gamma*_true": 0.38,
+  "gamma*_true_censored": 0,
+  "simultaneous_cov": [
+    0.946,
+    0.9302,
+    0.9584
+  ],
+  "pointwise_cov_g0.3": [
+    0.937,
+    0.9202,
+    0.9505
+  ],
+  "strict_tighter_rate": [
+    1.0,
+    0.9962,
+    1.0
+  ],
+  "mean_width_direct": 0.02288,
+  "mean_width_separate": 0.08567,
+  "gamma*_hat_mean": 0.387,
+  "gamma*_hat_rmse": 0.051,
+  "gamma*_CI_cov": [
+    0.992,
+    0.9843,
+    0.9959
+  ],
+  "gamma*_hi_censored_rate": 0.0,
+  "decision_rates": {
+    "retain": 0.355,
+    "reference": 0.0,
+    "defer": 0.645
+  },
+  "mean_regret": 0.00194,
+  "width_ratio_sep_over_dir": 3.744
+}

@@ -70,4 +70,3 @@ redistribute them.
 
 ## License
 MIT — see `LICENSE`.
-

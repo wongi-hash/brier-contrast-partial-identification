@@ -1,0 +1,41 @@
+{
+  "regime": "ambiguous",
+  "cens": "conditional",
+  "n": 1000,
+  "oracle": "retain",
+  "dRT_true": -0.0023,
+  "gamma*_true": 0.0,
+  "gamma*_true_censored": 0,
+  "simultaneous_cov": [
+    0.949,
+    0.9336,
+    0.961
+  ],
+  "pointwise_cov_g0.3": [
+    0.938,
+    0.9213,
+    0.9513
+  ],
+  "strict_tighter_rate": [
+    1.0,
+    0.9962,
+    1.0
+  ],
+  "mean_width_direct": 0.03619,
+  "mean_width_separate": 0.07124,
+  "gamma*_hat_mean": 0.016,
+  "gamma*_hat_rmse": 0.031,
+  "gamma*_CI_cov": [
+    0.994,
+    0.987,
+    0.9972
+  ],
+  "gamma*_hi_censored_rate": 0.0,
+  "decision_rates": {
+    "retain": 0.0,
+    "reference": 0.0,
+    "defer": 1.0
+  },
+  "mean_regret": 0.003,
+  "width_ratio_sep_over_dir": 1.968
+}

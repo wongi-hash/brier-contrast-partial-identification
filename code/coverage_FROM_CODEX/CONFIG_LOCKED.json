@@ -1,0 +1,41 @@
+{
+  "study_name": "sharp_direct_brier_contrast_extension_v1",
+  "seeds": [42, 52, 62, 72],
+  "reps_total": 1000,
+  "boot": 999,
+  "gamma_grid": [0.0, 0.1, 0.2, 0.3, 0.5],
+  "gamma_star_grid": {"max": 2.0, "step": 0.02},
+  "tau": 1.0,
+  "weibull_k": 1.5,
+  "gamma_true_shift": 0.25,
+  "n_source": 3000,
+  "n_target": 1500,
+  "censoring_modes": ["marginal", "conditional"],
+  "x_quintile_strata": true,
+  "decision_alpha": 0.05,
+  "defer_cost": 0.003,
+  "pS_intercept": 0.2,
+  "pS_slope": 0.7,
+  "dgp_regimes": {
+    "note": "Pre-registered BEFORE full run. Predictors q_j=sigmoid(i_j+s_j*x); p_S=sigmoid(0.2+0.7x). gmax = per-regime gamma* search upper bound. gstar_true verified in verify_regimes (candidate 0.38 / reference 0.44 / ambiguous 0 / finite 0.76 / no-crossing right-censored@0.5).",
+    "candidate_superior":       {"i0": 0.8, "s0": 0.7, "i1": 0.4, "s1": 0.7, "gmax": 2.0},
+    "reference_superior":       {"i0": 0.4, "s0": 0.7, "i1": 0.9, "s1": 0.7, "gmax": 2.0},
+    "ambiguous":                {"i0": -0.1, "s0": 0.7, "i1": 0.5, "s1": 0.7, "gmax": 2.0},
+    "finite_crossing":          {"i0": 2.0, "s0": 0.7, "i1": 0.2, "s1": 0.7, "gmax": 2.0},
+    "no_crossing_within_range": {"i0": 2.0, "s0": 0.7, "i1": 0.2, "s1": 0.7, "gmax": 0.5}
+  },
+  "application_matched_arm": {
+    "note": "Pre-registered SiM stress arm matching real NSCLC (needs runner extension for variable n/censoring/nonlinear p_S; offload). Reviewer-required.",
+    "n_source": 342, "n_target_stanford": 59, "n_target_va": 80,
+    "target_censoring": {"stanford": 0.64, "va": 0.60, "source": 0.69},
+    "pS_form": "nonlinear (e.g., sigmoid of spline in x)",
+    "stressors": ["low_overlap", "nuisance_misspecification", "true_shift_outside_gamma_class"],
+    "tau_locked_days": 730
+  },
+  "comparator_arm": {
+    "note": "Pre-registered repeated-simulation comparator (needs runner metric extension; offload). Reviewer-required.",
+    "methods": ["transport_gamma0", "scalar_tilt_steingrimsson", "separate_risk_subtraction", "proposed_xvarying_direct"],
+    "metrics": ["identified_set_coverage", "CI_coverage", "width", "decision_regret"]
+  },
+  "notes": "Config LOCKED before running. Do not retune gamma/threshold/seed/model after seeing results. Full run offloaded; smoke via FB_REPS/FB_BOOT. Bootstrap = joint nonparametric PAIRS bootstrap (source+target resampled, p_S refit). decision CI and simultaneous quantile derived from decision_alpha. application_matched_arm and comparator_arm are pre-registered specs; current runner implements the 5 gamma-star regimes only."
+}

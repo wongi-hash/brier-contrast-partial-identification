@@ -1,0 +1,41 @@
+{
+  "regime": "finite_crossing",
+  "cens": "conditional",
+  "n": 1000,
+  "oracle": "retain",
+  "dRT_true": -0.1076,
+  "gamma*_true": 0.76,
+  "gamma*_true_censored": 0,
+  "simultaneous_cov": [
+    0.949,
+    0.9336,
+    0.961
+  ],
+  "pointwise_cov_g0.3": [
+    0.935,
+    0.918,
+    0.9487
+  ],
+  "strict_tighter_rate": [
+    1.0,
+    0.9962,
+    1.0
+  ],
+  "mean_width_direct": 0.08624,
+  "mean_width_separate": 0.12893,
+  "gamma*_hat_mean": 0.763,
+  "gamma*_hat_rmse": 0.055,
+  "gamma*_CI_cov": [
+    0.992,
+    0.9843,
+    0.9959
+  ],
+  "gamma*_hi_censored_rate": 0.0,
+  "decision_rates": {
+    "retain": 1.0,
+    "reference": 0.0,
+    "defer": 0.0
+  },
+  "mean_regret": 0.0,
+  "width_ratio_sep_over_dir": 1.495
+}

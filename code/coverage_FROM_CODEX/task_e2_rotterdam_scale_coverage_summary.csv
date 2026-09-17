@@ -1,0 +1,2 @@
+n_source,n_target,reps_requested,reps_valid,fatal_fit_failures,simultaneous_endpoint_coverage,coverage_ci_low,coverage_ci_high,outer_envelope_coverage,outer_ci_low,outer_ci_high,inclass_gamma_coverage,inclass_ci_low,inclass_ci_high,mean_censoring,point_nonconvergence,bootstrap_requested,bootstrap_fit_failures,bootstrap_nonconverged,bootstrap_floor_draws,mean_critical_value
+516,686,1000,1000,0,0.943,0.9268629323405141,0.9557465596412841,0.946,0.9302078451539475,0.9583786862769372,0.943,0.9268629323405141,0.9557465596412841,0.3766453488372093,0,199000,0,0,80,2.0864989817386594

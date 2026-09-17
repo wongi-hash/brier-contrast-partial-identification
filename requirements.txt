@@ -1,0 +1,5 @@
+# Versions used for the locked coverage and decision-regime runs.
+# Python 3.8.5 (see code/coverage_FROM_CODEX/ENVIRONMENT_PROVENANCE.json).
+numpy==1.24.3
+pandas==2.0.3
+scipy==1.10.1

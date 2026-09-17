@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "Reproducibility package (results & tables): Sharp partial identification of direct Brier-risk contrasts under conditional outcome shift"
+authors:
+  - family-names: Choi
+    given-names: Won Gi
+    affiliation: Chonnam National University
+  - family-names: Kim
+    given-names: Sun-Ho
+    affiliation: Chonnam National University
+  - family-names: Kim
+    given-names: Min Soo
+    affiliation: Chonnam National University
+license: MIT
+repository-code: "https://github.com/wongi-hash/brier-contrast-partial-identification"
+url: "https://github.com/wongi-hash/brier-contrast-partial-identification"
+preferred-citation:
+  type: article
+  title: "Comparing Survival Prediction Models without Target Outcomes: Sharp Partial Identification of Direct Brier-Risk Contrasts under Conditional Outcome Shift"
+  journal: "Statistics in Medicine"
+  year: 2026
+  authors:
+    - family-names: Choi
+      given-names: Won Gi
+    - family-names: Kim
+      given-names: Sun-Ho
+    - family-names: Kim
+      given-names: Min Soo
