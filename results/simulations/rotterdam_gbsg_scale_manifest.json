@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "simulation": "targeted primary-implementation stress study",
+  "replicates": 1000,
+  "bootstrap_draws": 199,
+  "sensitivity_parameters": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.5
+  ],
+  "conditional_censoring_model": "exponential proportional hazards given Z=(q0,q1)",
+  "censoring_coefficient": [
+    1.0,
+    -0.75
+  ],
+  "ipcw_floor": 0.02,
+  "target_outcomes_used": "simulation truth only",
+  "source_sample_size": 516,
+  "target_sample_sizes": [
+    686
+  ],
+  "target_censoring_rate": 0.375968992248062
+}

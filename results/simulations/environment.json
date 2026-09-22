@@ -1,0 +1,9 @@
+{
+  "historical_execution_environment": {
+    "python": "3.8.5",
+    "numpy": "1.24.3",
+    "pandas": "2.0.3"
+  },
+  "portable_environment": "See requirements.txt and requirements-locked-py38.txt.",
+  "local_paths_retained": false
+}

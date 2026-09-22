@@ -1,0 +1,14 @@
+{
+  "status": "PASS_MANUSCRIPT_ALIGNED_RELEASE_AUDIT",
+  "checks": [
+    "primary-implementation coverage values",
+    "application-scale comparator aggregate",
+    "controlled-geometry illustration",
+    "NSCLC outcome-free aggregate",
+    "Rotterdam\u2013GBSG supporting analysis",
+    "figures and tables",
+    "privacy, credential, local-path, and terminology scan"
+  ],
+  "public_file_count": 100,
+  "note": "Clean-environment and Git-history tests are documented in VALIDATION_REPORT.md."
+}

@@ -1,53 +1,45 @@
-# Public-package validation report
+# Validation report
 
-Validation date: 2026-09-17
+The release candidate is checked at four levels.
 
-## Structural checks
+## Numerical invariants
 
-- 11 Python source files parsed successfully with `ast.parse`.
-- 15 JSON files parsed successfully.
-- 7 CSV files loaded successfully.
-- No committed CSV contains patient identifiers or individual time/event rows;
-  all CSVs are simulation aggregates or configuration-level derived results.
-- No credentials, API tokens, or machine-specific absolute paths were detected.
-- Generated `__pycache__` and `*.pyc` files are excluded by `.gitignore` and by
-  the public manifest.
+- Primary-implementation simultaneous endpoint coverage is 0.859, 0.847, and
+  0.943 at target sample sizes 60, 80, and 686.
+- Corresponding outer-envelope coverage is 0.861, 0.847, and 0.946.
+- Application-scale direct/separate identified-set width ratios reproduce the
+  manuscript values.
+- The controlled-geometry illustration reproduces ratios 1.00, 1.22, 1.61,
+  2.46, and 5.73.
+- NSCLC outcome-free results contain 40 primary and 40 SRDO sensitivity
+  configurations, all with decision DEFER.
+- In the Rotterdam–GBSG supporting analysis, seed 62 at sensitivity parameter
+  0.2 gives ADOPT CANDIDATE for direct identification and DEFER for
+  separate-risk subtraction.
 
-## Synthetic execution smoke tests
+## Executable paths
 
-- `RUN_TASK_E_PRIMARY_COVERAGE.py` imported with the locked defaults
-  (`reps=1000`, `bootstrap=199`, `gamma={0,0.1,0.2,0.3,0.5}`).
-- A reduced-bootstrap synthetic replication completed and returned both
-  two-sided simultaneous endpoint coverage and outer-envelope coverage fields.
-- The generic NSCLC downstream inference function completed on synthetic frozen
-  predictions after reducing the bootstrap count for the smoke test.
+- The NSCLC runner completes with the public synthetic fixture and refuses a
+  target file containing outcome columns.
+- The application-scale comparator smoke run completes through generation and
+  aggregation.
+- The public Rotterdam–GBSG pipeline reconstructs the analysis from the R
+  `survival` data.
+- Figure and table builders regenerate all cited files from committed
+  aggregates.
 
-## Locked numerical checks
+## Public-data boundary
 
-The committed conditional-censoring coverage summaries reproduce:
+No institutional patient-level file, patient identifier, date, individual
+prediction, raw image, segmentation, credential, or secret is included. Real
+NSCLC inputs remain restricted. Public scripts use repository-relative paths;
+no local user directory or institutional filesystem path is retained.
 
-| `n_source` | `n_target` | Two-sided endpoint coverage | Outer-envelope coverage |
-|---:|---:|---:|---:|
-| 114 | 60 | 0.859 | 0.861 |
-| 114 | 80 | 0.847 | 0.847 |
-| 516 | 686 | 0.943 | 0.946 |
+## Terminology audit
 
-For the application-scale comparator at `n_target=80` and `gamma=0.2`, the
-committed aggregate reproduces the following direct-versus-separate ratios and
-true-contrast containment values:
+Public paths, documentation, code labels, aggregate outputs, and table/figure
+builders use the terminology in the manuscript. Development task labels,
+dated working-folder names, and superseded cohort-comparison suffixes are
+excluded by the fail-closed release validator.
 
-| Scenario | Identified-set width ratio | Confidence-envelope width ratio | Direct true-contrast containment |
-|---|---:|---:|---:|
-| No shift | 3.44 | 1.59 | 0.980 |
-| Z-varying in-class shift | 3.44 | 1.58 | 0.982 |
-| Low overlap | 3.62 | 1.47 | 0.891 |
-| Misspecified source outcome regression | 3.43 | 1.58 | 0.968 |
-
-## Application reproducibility boundary
-
-The repository provides the generic NSCLC downstream sharp-contrast runner and
-configuration-level derived results. It does not redistribute institutional
-patient data, frozen patient-level prediction files, or upstream radiomic
-feature matrices. Consequently, the public package verifies the inference code
-and committed summaries but does not claim a fully self-contained reconstruction
-of the institutional feature-building pipeline.
+The exact automated checks are implemented in `validate_release.py`.

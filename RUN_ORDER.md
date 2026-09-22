@@ -1,35 +1,46 @@
-# Run order — script → manuscript table / result
+# Reproduction order and traceability
 
-The conditional-censoring coverage package is in `code/coverage_FROM_CODEX/`.
-Its public paths have been normalized; locked configurations and results are
-unchanged.
-
-## Tables / numerical results
-| Manuscript object | Result file | Producing code |
+| Manuscript output | Committed result | Generator |
 |---|---|---|
-| Table 1 (comparator widths + true-contrast containment) | `final_sim/COMPARATOR_6080_AGGREGATED.csv` | `final_sim/RUN_COMPARATOR_APPMATCHED_SIM_V2.py` → `final_sim/AGGREGATE_COMPARATOR_6080.py` |
-| Table S6 (m_S-misspecification containment) | `final_sim/COMPARATOR_6080_AGGREGATED.csv` | comparator study (same as above) |
-| Table S4 (Rotterdam→GBSG decisions, seed × γ) | `direct_separate_harmonized_20260902/harmonized_direct_separate.csv` | `code/RUN_DIRECT_SEPARATE_HARMONIZATION_C4_20260902.py` |
-| §4.6 / Table 3 (NSCLC direct vs separate) | `ctdate_60_80_results/direct_separate_59_80_vs_60_80.csv` | derived application result; generic downstream runner: `code/RUN_NSCLC_HONEST_SPLIT_SHARP_CONTRAST.py` |
-| Table S5 (decision-regime frequencies) | `pending_BDS7_20260907_results/B/AGG_*.json` | `code/coverage_FROM_CODEX/RUN_SHARP_CONTRAST_EXTENSION_SIM.py` |
-| Table S9 (γ-grid two-sided **and** outer-envelope coverage: 0.859/0.847/0.943 and 0.861/0.847/0.946) | `code/coverage_FROM_CODEX/FINAL_RESULTS_3_ROWS.csv` | `RUN_TASK_E_PRIMARY_COVERAGE.py` + `RUN_TASK_E2_ROTTERDAM_SCALE_COVERAGE.py`; parallel drivers in the same directory |
-| Table S10 (horizon sensitivity) | `code/coverage_FROM_CODEX/horizon_sensitivity.csv` | `code/coverage_FROM_CODEX/RUN_TASK_D_HORIZON_SENSITIVITY.py` |
+| Controlled-geometry illustration | `results/simulations/controlled_geometry.csv` | `code/simulations/generate_controlled_geometry.py` |
+| Application-scale comparator | `results/simulations/application_scale_comparator.csv` | `code/simulations/application_scale_comparator/run_all.py` |
+| Decision-regime study | `results/simulations/decision_regime/*.json` | `code/simulations/decision_regime/run_decision_regime.py` |
+| Primary-implementation coverage | `results/simulations/primary_implementation_coverage.csv` | `code/simulations/primary_implementation_coverage/` |
+| NSCLC horizon sensitivity | `results/nsclc/horizon_sensitivity.csv` | `code/nsclc/run_horizon_sensitivity.py` (restricted inputs required) |
+| NSCLC outcome-free evaluation | `results/nsclc/outcome_free_evaluation.csv` | `code/nsclc/run_outcome_free_evaluation.py` (restricted inputs required; synthetic fixture public) |
+| Rotterdam–GBSG supporting analysis | `results/applications/direct_vs_separate.csv` | `code/rotterdam_gbsg/run_public_pipeline.py` |
 
-## Coverage tables (once Codex files are in place)
+## Portable smoke checks
+
 ```bash
-cd code/coverage_FROM_CODEX
-python run_task_e_parallel.py                    # E: n_T = 60, 80
-python run_task_e2_parallel.py                   # E2: n_T = 686
+python code/simulations/generate_controlled_geometry.py
+python code/nsclc/run_outcome_free_evaluation.py --synthetic --bootstrap 9 --out _check/nsclc
+python code/simulations/application_scale_comparator/run_all.py --smoke --output _check/comparator
+python build_tables.py
+python build_figures.py
+python validate_release.py
 ```
-Expected: two-sided = 0.859 / 0.847 / 0.943; outer-envelope = 0.861 / 0.847 / 0.946.
 
-## Notes
-- Seeds fixed per runner (42/52/62/72); B = 199 bootstrap; 1000 MC replications per
-  setting (see each runner's config / `CONFIG_EXECUTED.json`).
-- Target outcomes are used only to define the synthetic simulation truth.
-- The generic NSCLC downstream runner is public, but the exact clinical/radiomic
-  inputs are restricted and are not redistributed. The committed NSCLC tables
-  are derived, configuration-level results rather than patient records.
-- Horizon and diagnostic scripts require restricted inputs; their committed
-  summaries can be inspected without those inputs.
-- Figures are not part of this package; they are regenerable from the result files above.
+## Full application-scale simulation
+
+```bash
+python code/simulations/application_scale_comparator/run_all.py --full --output _full/comparator
+```
+
+## Rotterdam–GBSG public-data analysis
+
+```bash
+cd code/rotterdam_gbsg
+python run_public_pipeline.py --bootstrap 999
+```
+
+The outcome-free stage rejects any target outcome column. Use
+`--open-outcomes` only for the separate retrospective outcome comparison.
+
+## Restricted NSCLC inputs
+
+The institutional analysis requires the schema in `code/nsclc/input_schema.md`.
+No institutional patient-level input is included in this public release. The
+synthetic fixture verifies the same loader, firewall, censoring model, source
+outcome regression, joint pairs bootstrap, and decision code without
+reproducing manuscript data.

@@ -1,0 +1,34 @@
+{
+  "study": "targeted primary-implementation stress study",
+  "source_sample_sizes": [
+    114,
+    516
+  ],
+  "target_sample_sizes": [
+    60,
+    80,
+    686
+  ],
+  "replicates_per_setting": 1000,
+  "bootstrap_draws_per_replicate": 199,
+  "seeds": [
+    42,
+    52,
+    62,
+    72
+  ],
+  "sensitivity_parameters": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.5
+  ],
+  "software": {
+    "python": "3.8.5",
+    "numpy": "1.24.3",
+    "pandas": "2.0.3"
+  },
+  "result": "results/simulations/primary_implementation_coverage.csv",
+  "note": "Portable source code is provided; no local executable or filesystem path is retained."
+}

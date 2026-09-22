@@ -1,5 +1,10 @@
-# Versions used for the locked coverage and decision-regime runs.
-# Python 3.8.5 (see code/coverage_FROM_CODEX/ENVIRONMENT_PROVENANCE.json).
-numpy==1.24.3
-pandas==2.0.3
-scipy==1.10.1
+# Portable public code-path environment (Python 3.9-3.12).
+# Exact historical coverage versions are in requirements-locked-py38.txt and
+# results/simulations/environment.json.
+numpy>=1.24,<3
+pandas>=2.0,<3
+scipy>=1.10,<2
+scikit-learn>=1.3,<2
+lifelines>=0.27,<1
+matplotlib>=3.7,<4
+Pillow>=10,<13

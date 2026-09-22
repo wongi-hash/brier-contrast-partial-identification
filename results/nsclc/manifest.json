@@ -1,0 +1,23 @@
+{
+  "status": "AUDITABLE_AGGREGATE_RESTRICTED_INPUTS_NOT_DISTRIBUTED",
+  "cohort_sizes": {
+    "source_calibration": 114,
+    "Stanford": 60,
+    "VA": 80
+  },
+  "target_events_used_in_outcome_free_analysis": false,
+  "primary_configurations": 40,
+  "srdo_sensitivity_configurations": 40,
+  "bootstrap_draws": 999,
+  "reported_sensitivity_parameters": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.5
+  ],
+  "public_statistical_module": "code/inference/direct_vs_separate.py",
+  "public_runner": "code/nsclc/run_outcome_free_evaluation.py",
+  "aggregate_output": "results/nsclc/outcome_free_evaluation.csv",
+  "privacy_note": "No patient-level input, identifier, date, or individual prediction is distributed."
+}

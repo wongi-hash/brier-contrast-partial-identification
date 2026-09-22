@@ -12,13 +12,16 @@ authors:
     given-names: Min Soo
     affiliation: Chonnam National University
 license: MIT
+version: 1.0.1
+date-released: 2026-09-18
+doi: 10.5281/zenodo.22807124
 repository-code: "https://github.com/wongi-hash/brier-contrast-partial-identification"
 url: "https://github.com/wongi-hash/brier-contrast-partial-identification"
 preferred-citation:
-  type: article
+  type: unpublished
   title: "Comparing Survival Prediction Models without Target Outcomes: Sharp Partial Identification of Direct Brier-Risk Contrasts under Conditional Outcome Shift"
-  journal: "Statistics in Medicine"
   year: 2026
+  notes: "Manuscript in preparation (2026); not yet accepted or published. Intended submission to Statistics in Medicine."
   authors:
     - family-names: Choi
       given-names: Won Gi

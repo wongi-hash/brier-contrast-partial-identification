@@ -10,12 +10,23 @@ uploads/
 
 # scratch dirs
 *_scratch/
+_smoke/
+_rtemp/
+.rtemp/
+_check/
+_full/
+
+# smoke / re-run simulation output trees (regenerate via runners)
+**/decision_regime_results/
+**/comparator/
+**/candidate_superior_mirror/
+**/nsclc_scale_results/
+**/rotterdam_gbsg_scale_results/
 
 # large per-replicate simulation checkpoints (regenerate via runners)
 **/checkpoint_*.json
 **/ckpt_*.json
-**/task_e*_logs/
-**/task_b*_logs/
+**/*_scale_logs/
 
 # restricted application inputs are never public
 **/restricted_inputs/
@@ -24,7 +35,24 @@ uploads/
 **/target_*.csv
 **/calibration_*.csv
 
+# Public synthetic fixture is intentionally tracked (never real patient data).
+!synthetic_fixture/
+!synthetic_fixture/**
+
 # local provenance and packaging scratch
 *.pid
 *.log
 *.zip
+
+# Public-data pipeline regenerates these from R survival.
+code/rotterdam_gbsg/rotterdam.csv
+code/rotterdam_gbsg/gbsg.csv
+code/rotterdam_gbsg/R_SESSION_INFO.txt
+code/rotterdam_gbsg/SURVIVAL_CITATION.txt
+code/rotterdam_gbsg/analysis_inputs/
+code/rotterdam_gbsg/sealed_oracle/
+code/rotterdam_gbsg/model_locks/
+code/rotterdam_gbsg/outcome_free_results/
+code/rotterdam_gbsg/direct_vs_separate_results/
+code/rotterdam_gbsg/PACKAGING_MANIFEST.json
+code/rotterdam_gbsg/retrospective_outcome_results/
