@@ -45,6 +45,12 @@ python build_figures.py
 python validate_release.py
 ```
 
+`build_figures.py` writes regenerated artwork to `build/figures/` by default.
+It does not overwrite the committed reference figures. To intentionally stage
+release artwork in another directory, set `SIM_REPRO_FIGDIR` explicitly. The
+release validator verifies every byte listed in `SHA256SUMS.txt`; it does not
+accept file presence alone as an integrity check.
+
 Full application-scale comparator regeneration:
 
 ```bash
@@ -57,6 +63,18 @@ Public Rotterdam–GBSG supporting analysis:
 cd code/rotterdam_gbsg
 python run_public_pipeline.py --bootstrap 999
 ```
+
+**R requirements:** R 4.x and the `survival` package are required. Version
+`3.8-3` of `survival` was used for the archived analysis. The pipeline invokes
+the export stage as:
+
+```bash
+Rscript 00_export_survival_data.R
+```
+
+The remaining stages are orchestrated by `run_public_pipeline.py`. A future
+`survival` version should not be substituted for release verification without
+recording the version and checking the locked outputs.
 
 Add `--open-outcomes` only for the explicitly retrospective outcome comparison.
 The supporting analysis is not presented as prospectively blinded clinical
@@ -73,6 +91,16 @@ validation.
 - NSCLC: DEFER across all prespecified primary and SRDO sensitivity
   configurations.
 
+## Restricted-input supplementary analyses
+
+Supplementary items S7, S8, S11, and S14 use the restricted NSCLC inputs.
+Their committed, non-individual-level summaries can be audited, but these
+items are not fully rerunnable from the public repository alone. This is the
+same data boundary described above; it is not a claim that the institutional
+inputs are publicly available. Where a summary is not present in `results/` or
+`tables/`, the corresponding item must not be described as publicly
+regenerable.
+
 ## Data and software terms
 
 The public TCIA NSCLC-Radiogenomics and R `survival` datasets remain governed
@@ -87,6 +115,7 @@ See `RUN_ORDER.md` for code-to-result traceability and
 - Repository: https://github.com/wongi-hash/brier-contrast-partial-identification
 - Zenodo concept DOI: https://doi.org/10.5281/zenodo.22807124
 - Version 1.0.0 DOI: https://doi.org/10.5281/zenodo.22807125
+- Version 1.1.0 DOI: pending final validation and Zenodo publication
 
 The next version will be published only after final validation and explicit
 approval.

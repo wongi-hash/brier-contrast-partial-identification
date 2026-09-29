@@ -1,5 +1,6 @@
 """Fail-closed audit for the manuscript-aligned public release candidate."""
 from __future__ import annotations
+import hashlib
 import json
 import re
 import subprocess
@@ -15,8 +16,43 @@ def need(condition, message):
         raise AssertionError(message)
 
 
+def sha256(path):
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def verify_checksum_ledger():
+    """Verify every archived byte listed in SHA256SUMS.txt.
+
+    The ledger deliberately excludes itself and MANIFEST.md. Generated files
+    under build/ are ignored and therefore cannot make this check pass or fail.
+    """
+    ledger = ROOT / "SHA256SUMS.txt"
+    need(ledger.is_file(), "missing SHA256SUMS.txt")
+    entries = []
+    for line_number, raw in enumerate(ledger.read_text(encoding="utf-8").splitlines(), start=1):
+        if not raw.strip():
+            continue
+        match = re.fullmatch(r"([0-9a-f]{64})  (.+)", raw)
+        need(match is not None, f"malformed SHA256SUMS.txt line {line_number}")
+        expected, relative = match.groups()
+        path = ROOT / Path(relative)
+        need(path.is_file(), f"checksum target missing: {relative}")
+        actual = sha256(path)
+        need(actual == expected, f"checksum mismatch: {relative}: expected {expected}, got {actual}")
+        entries.append(relative)
+    need(entries, "empty SHA256SUMS.txt")
+    need(len(entries) == len(set(entries)), "duplicate paths in SHA256SUMS.txt")
+    return len(entries)
+
+
 def main():
     checks = []
+    checksum_entries = verify_checksum_ledger()
+    checks.append(f"SHA256SUMS ledger ({checksum_entries} files)")
     coverage = pd.read_csv(ROOT / "results/simulations/primary_implementation_coverage.csv").sort_values("n_target")
     need(coverage.n_target.tolist() == [60, 80, 686], "coverage target rows")
     need(np.allclose(coverage.two_sided_coverage, [.859, .847, .943]), "two-sided coverage")

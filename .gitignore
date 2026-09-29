@@ -15,6 +15,7 @@ _rtemp/
 .rtemp/
 _check/
 _full/
+build/
 
 # smoke / re-run simulation output trees (regenerate via runners)
 **/decision_regime_results/

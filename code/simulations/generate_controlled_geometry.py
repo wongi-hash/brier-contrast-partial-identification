@@ -9,7 +9,8 @@ import numpy as np
 import pandas as pd
 
 HERE=Path(__file__).resolve().parent
-OUT=HERE.parent/"derived"/"controlled_geometry.csv"
+ROOT=HERE.parents[1]
+OUT=ROOT/"results"/"simulations"/"controlled_geometry.csv"
 def expit(x): return 1/(1+np.exp(-x))
 def logit(p): return np.log(p/(1-p))
 def main():
@@ -25,6 +26,6 @@ def main():
         wsep=np.mean((np.abs(1-2*q1)+np.abs(1-2*q0))*band)
         rows.append({"same_side_fraction":f,"gamma":gamma,"n":n,"seed":3,
                      "W_direct":wdir,"W_separate":wsep,"width_ratio":wsep/wdir})
-    OUT.parent.mkdir(exist_ok=True); pd.DataFrame(rows).to_csv(OUT,index=False)
+    OUT.parent.mkdir(parents=True,exist_ok=True); pd.DataFrame(rows).to_csv(OUT,index=False)
     print(pd.DataFrame(rows).to_string(index=False)); print("[PASS]",OUT)
 if __name__=="__main__": main()

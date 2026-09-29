@@ -39,7 +39,9 @@ try:
 except NameError:
     BASE = os.environ.get("SIM_REPRO_ROOT", os.getcwd())
 
-FIGDIR = os.path.join(BASE, "figures")
+# Never overwrite the committed reference figures during an ordinary rebuild.
+# Set SIM_REPRO_FIGDIR explicitly only when intentionally preparing a release.
+FIGDIR = os.environ.get("SIM_REPRO_FIGDIR", os.path.join(BASE, "build", "figures"))
 os.makedirs(FIGDIR, exist_ok=True)
 
 MM = 1 / 25.4

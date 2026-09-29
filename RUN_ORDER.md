@@ -21,6 +21,10 @@ python build_figures.py
 python validate_release.py
 ```
 
+Regenerated figures are written to `build/figures/`; committed reference
+figures under `figures/` are not overwritten. `validate_release.py` verifies
+the complete `SHA256SUMS.txt` ledger before checking numerical claims.
+
 ## Full application-scale simulation
 
 ```bash
@@ -44,3 +48,7 @@ No institutional patient-level input is included in this public release. The
 synthetic fixture verifies the same loader, firewall, censoring model, source
 outcome regression, joint pairs bootstrap, and decision code without
 reproducing manuscript data.
+
+Supplementary S7, S8, S11, and S14 are restricted-input analyses. They are
+auditable only through committed aggregate summaries and are not represented
+as fully rerunnable public-data analyses.

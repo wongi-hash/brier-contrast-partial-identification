@@ -1,6 +1,7 @@
 {
   "status": "PASS_MANUSCRIPT_ALIGNED_RELEASE_AUDIT",
   "checks": [
+    "SHA256SUMS ledger (98 files)",
     "primary-implementation coverage values",
     "application-scale comparator aggregate",
     "controlled-geometry illustration",

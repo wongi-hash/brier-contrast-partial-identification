@@ -10,12 +10,12 @@ Intended public files hashed: **98**.
 | SHA-256 | Bytes | Relative path |
 |---|---:|---|
 | `f17bdb0bbd1df417d32b476302913409cafc2a9d55e672856e757dcbdf4ed5bb` | 411 | `.gitattributes` |
-| `996896ed49df5d58e770ee79fb22aeddabc63147aef49b465db0ffb834ae2fd8` | 1342 | `.gitignore` |
-| `67861943a2b65a7f6514d8a987ba6a38b6413aecf32668aa8a9e0fe94156745b` | 26288 | `build_figures.py` |
+| `04e1849db8135b313a31687fc6e925917c75ab98dc58c4402eb2c1e8bb0ba1b5` | 1349 | `.gitignore` |
+| `de6c0b938b05a5c93001453e6dff9095ae21679bbeda52382fe5f4cebc4da3f8` | 26490 | `build_figures.py` |
 | `e842472b2558f1785a603a0168dde1af001473a28867e5a8f9aea9b2e422e285` | 2522 | `build_release_manifest.py` |
 | `d5576a38f46ea9becbd0425b659989791f4f24677e4132cd26ba3b810c487f0b` | 1688 | `build_tables.py` |
-| `da2053e85fd7b052b49d41eb44e0254922302b3086429ea663714cb96c88345f` | 599 | `CHANGELOG.md` |
-| `d47bdeb2de8188a5dfcce74b0630ab814aa3488839304502ddba9b61b2bc0c52` | 1263 | `CITATION.cff` |
+| `b93425423bce5595b767f069e4211bc58eb057c3e469177cd84d888c3b19e7d7` | 1296 | `CHANGELOG.md` |
+| `4593f261aa505a82ab685b32b69e919a493d0178414d9244022c4d86c3dd00f9` | 1284 | `CITATION.cff` |
 | `ddb28c9012243bfa5e92418d665b630bc70466db26824b4839c0218cf7ae7ac2` | 10918 | `code/inference/direct_vs_separate.py` |
 | `48a75448d73d35de3c49c676725dd2261386a08d78d8200549f8c2cdcbae188f` | 987 | `code/nsclc/input_schema.md` |
 | `e6a4f86418ae2a8613b6ddf593dbc45ed67e821fecdac4eabaa08100945eba00` | 7350 | `code/nsclc/run_horizon_sensitivity.py` |
@@ -35,7 +35,7 @@ Intended public files hashed: **98**.
 | `9ae6fc7643cdfcfc515b4fa9ec64c80dc114d67e429e30a52a10520b534f8bee` | 15822 | `code/simulations/application_scale_comparator/run_comparator.py` |
 | `a76848421d89a2376993028efd5e9cecfcd674cc7ab9788fc48e62cc0f71c034` | 1059 | `code/simulations/decision_regime/configuration.json` |
 | `e4e96995d1bda37e06b4a6155b648e927870463ac4767d6c6b9cac78f952220b` | 13215 | `code/simulations/decision_regime/run_decision_regime.py` |
-| `be102d40592a8643efd265a0a491de73d6dc9799e2a2833d4bfdc2a91c5d3dd3` | 1313 | `code/simulations/generate_controlled_geometry.py` |
+| `a997ca6d36e930aa740e3baf4aacec3d658199acf2963ce36ea78e5dbbca09e9` | 1354 | `code/simulations/generate_controlled_geometry.py` |
 | `ce0a3cbb35927cd5012ef8eaece8af04d6e33adbaab9c504e81bed6273dcb961` | 11617 | `code/simulations/primary_implementation_coverage/diagnostics.py` |
 | `ed93da5f883a9cad4b1ff3c996a5a1db9395c2276e4826a0b887127cafcd6280` | 11009 | `code/simulations/primary_implementation_coverage/run_nsclc_scale.py` |
 | `4e66cdae7f882fa6a46793a457350731ebba7778199ddd50ab9419ee42a6eb9a` | 2316 | `code/simulations/primary_implementation_coverage/run_nsclc_scale_parallel.py` |
@@ -66,7 +66,7 @@ Intended public files hashed: **98**.
 | `0d3f9b276b040477a23983280641545785057c0acab7bbc01098ddb62a858157` | 248742 | `figures/Figure_S2.png` |
 | `227d254f1e198af85692d5a4f8cc4faa8da234e8e4698f42c0846b632c593da9` | 1705718 | `figures/Figure_S2.tiff` |
 | `2c2d7b37b037c060065d9dd9d6a2dfb02871927737ade0cc3be67a6eb5fa6a75` | 1123 | `LICENSE` |
-| `a9204bd1317b410ce129416fe6057346d32db3a7dd1b229e01f15d8fa3e5ab29` | 3788 | `README.md` |
+| `c23a6ae07a9693af73a528c76492279734e88f3af39ddd11d542a912c9929050` | 5159 | `README.md` |
 | `5fc80e10ad277ffcb90d90149ee98025fb2f485dee659249d808a6bdbc101eac` | 254 | `requirements-locked-py38.txt` |
 | `9260cb36e3a60e1e62d109b270151c0e79fbbd5e044d3c720c864d65a235efc9` | 295 | `requirements.txt` |
 | `befba9fef622d1a582b8456cfafd48d49c0de8cf71800c92091df038a811d9ac` | 51676 | `results/applications/direct_vs_separate.csv` |
@@ -74,7 +74,7 @@ Intended public files hashed: **98**.
 | `a99cab23d1fb4fb826a0be4271638e622d1260818cf77f771181256e7a539e43` | 731 | `results/nsclc/manifest.json` |
 | `07c480cc210742fb33a426f752475087c063c3e94e5dac184739d53698343c52` | 41214 | `results/nsclc/outcome_free_evaluation.csv` |
 | `0c8e4ba2439fdec7b5bd941e188d566d2cd91f3a6723320d485cc19d7057fc42` | 94434 | `results/simulations/application_scale_comparator.csv` |
-| `d826f6b62cc377aefe0d2d73d54f4aca226215b3bca2f90f37ea6fa6e8d85e1f` | 435 | `results/simulations/controlled_geometry.csv` |
+| `1a0ca6d46fd384618dad21baae4834e618b37eec8355c2ae2f24cdde4d9b8741` | 438 | `results/simulations/controlled_geometry.csv` |
 | `5b3e527d576e13091cf0f560522521d7e7822e86f18265c31411d92cf657d48c` | 750 | `results/simulations/decision_regime/ambiguous_conditional.json` |
 | `9378ef2bbc56123d287e4983eb179473d8cca873bc8980cb489189cab884e1f7` | 747 | `results/simulations/decision_regime/ambiguous_marginal.json` |
 | `80f87d0a7d6296b5dd66e54fd327458ce16d4be4717af613dcc32b0b53aab1e7` | 768 | `results/simulations/decision_regime/candidate_superior_conditional.json` |
@@ -92,7 +92,7 @@ Intended public files hashed: **98**.
 | `19a991b5e3106bac8b2683cbe0d474993ba06d4af5aab05471c25b6e5a574c10` | 660 | `results/simulations/primary_implementation_execution.json` |
 | `3eb40c5165b560599e14510ddf6680a266302f78ad0ce697078d568a7bd36676` | 584 | `results/simulations/rotterdam_gbsg_scale_coverage.csv` |
 | `e814dae0fa1246588434ee1e7cc7f14335225e14c4e3818e6e489a9561bcd41b` | 563 | `results/simulations/rotterdam_gbsg_scale_manifest.json` |
-| `3508ac0ac55e47b9aa1d54688ac0519704e75f0d353e1234ace54bb232dc91a6` | 2271 | `RUN_ORDER.md` |
+| `7a1a5b2677a622220878a9dd38aae7ac2fa772e018ef0b230225ee3470014a98` | 2688 | `RUN_ORDER.md` |
 | `ffdf0101e78d680629ba439c151dcdfcd30356f387dd52a93ed15797d9100c3c` | 5709 | `synthetic_fixture/expected_output/gamma_sweep_direct_separate.csv` |
 | `f44343434b9e873a95727c21edf934beb634a0d72630ab206c1752f9b3f19555` | 3205 | `synthetic_fixture/expected_output/MANIFEST.json` |
 | `dd5729dd79f55c72469553acd72d41d297ef5921c06ffd6f6d75cccf49023f12` | 7289 | `synthetic_fixture/nsclc/pet_radiomic_candidate/seed42/calibration_Stanford.csv` |
@@ -104,9 +104,9 @@ Intended public files hashed: **98**.
 | `f5d3bbbd498cafaddf0aa1cafc89fc23199450d8cbf4f74cdbf0abca4ff39ff2` | 10847 | `tables/Table_S4_Rotterdam_GBSG_decisions.csv` |
 | `361f73e6d3ffdde8623f587b8b6944d1e2718bf88ce07356ba172469d007bf5d` | 2694 | `tables/Table_S5_decision_regimes.csv` |
 | `480e01e69ddb37ef5454257f4567d0eb750387fc57f0bec0861c6c08becc7dbd` | 589 | `tables/Table_S9_primary_implementation_coverage.csv` |
-| `d04e86838342c5ff7d962b04a629ab1db72a888ae79d25e5637fc38290a42510` | 5600 | `validate_release.py` |
-| `5329b9ede0d5ada17d832ce88c128463f1fbb7bb776a93d7f0cb8db753d07a42` | 1876 | `VALIDATION_REPORT.md` |
-| `a176e23b935620d14a7c380d82b401c5c193c0f1a9051cb6775e0b9052b21541` | 509 | `VALIDATION_RESULTS.json` |
+| `50d94327ea77bcced4fd67735c509adbefe0a7d7f2d7d1a88a80a795e5a40ba7` | 7057 | `validate_release.py` |
+| `f85d01ad14255fea4b0da0d768ba2efdb76709d5f3670e87d2c4a254c451b719` | 2892 | `VALIDATION_REPORT.md` |
+| `fc9757ee121bc58fbd613f371b448b0f30d3d34678a0facc099d1b6468c8ecbc` | 546 | `VALIDATION_RESULTS.json` |
 
 No institutional patient-level inputs or raw images are intentionally included.
 No local executable path, user directory, or institutional filesystem path
