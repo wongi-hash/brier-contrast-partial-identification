@@ -14,8 +14,8 @@ Intended public files hashed: **98**.
 | `de6c0b938b05a5c93001453e6dff9095ae21679bbeda52382fe5f4cebc4da3f8` | 26490 | `build_figures.py` |
 | `e842472b2558f1785a603a0168dde1af001473a28867e5a8f9aea9b2e422e285` | 2522 | `build_release_manifest.py` |
 | `d5576a38f46ea9becbd0425b659989791f4f24677e4132cd26ba3b810c487f0b` | 1688 | `build_tables.py` |
-| `b93425423bce5595b767f069e4211bc58eb057c3e469177cd84d888c3b19e7d7` | 1296 | `CHANGELOG.md` |
-| `4593f261aa505a82ab685b32b69e919a493d0178414d9244022c4d86c3dd00f9` | 1284 | `CITATION.cff` |
+| `33f248b5b9eda054161cab7bb5ef31f06495e6d17201967e8fc8048292d93218` | 1287 | `CHANGELOG.md` |
+| `f977d8f73cdad3e9a2f415ada43e00ec7830150b2505061b0d83aea87033e54a` | 1263 | `CITATION.cff` |
 | `ddb28c9012243bfa5e92418d665b630bc70466db26824b4839c0218cf7ae7ac2` | 10918 | `code/inference/direct_vs_separate.py` |
 | `48a75448d73d35de3c49c676725dd2261386a08d78d8200549f8c2cdcbae188f` | 987 | `code/nsclc/input_schema.md` |
 | `e6a4f86418ae2a8613b6ddf593dbc45ed67e821fecdac4eabaa08100945eba00` | 7350 | `code/nsclc/run_horizon_sensitivity.py` |
@@ -66,7 +66,7 @@ Intended public files hashed: **98**.
 | `0d3f9b276b040477a23983280641545785057c0acab7bbc01098ddb62a858157` | 248742 | `figures/Figure_S2.png` |
 | `227d254f1e198af85692d5a4f8cc4faa8da234e8e4698f42c0846b632c593da9` | 1705718 | `figures/Figure_S2.tiff` |
 | `2c2d7b37b037c060065d9dd9d6a2dfb02871927737ade0cc3be67a6eb5fa6a75` | 1123 | `LICENSE` |
-| `c23a6ae07a9693af73a528c76492279734e88f3af39ddd11d542a912c9929050` | 5159 | `README.md` |
+| `c8f9cda1b308c3537aade96adfa04db41968dfddd557d5e51007077b265a2ad2` | 5151 | `README.md` |
 | `5fc80e10ad277ffcb90d90149ee98025fb2f485dee659249d808a6bdbc101eac` | 254 | `requirements-locked-py38.txt` |
 | `9260cb36e3a60e1e62d109b270151c0e79fbbd5e044d3c720c864d65a235efc9` | 295 | `requirements.txt` |
 | `befba9fef622d1a582b8456cfafd48d49c0de8cf71800c92091df038a811d9ac` | 51676 | `results/applications/direct_vs_separate.csv` |

@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.1.0 — pending publication
+## v1.1.0 — 2026-09-29
 
 - aligned every public path and analysis label with manuscript terminology;
 - removed local filesystem paths and execution-machine snapshots;

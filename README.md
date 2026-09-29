@@ -115,7 +115,7 @@ See `RUN_ORDER.md` for code-to-result traceability and
 - Repository: https://github.com/wongi-hash/brier-contrast-partial-identification
 - Zenodo concept DOI: https://doi.org/10.5281/zenodo.22807124
 - Version 1.0.0 DOI: https://doi.org/10.5281/zenodo.22807125
-- Version 1.1.0 DOI: pending final validation and Zenodo publication
+- Version 1.1.0 DOI: https://doi.org/10.5281/zenodo.23028694
 
 The next version will be published only after final validation and explicit
 approval.

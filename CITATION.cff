@@ -13,7 +13,8 @@ authors:
     affiliation: Chonnam National University
 license: MIT
 version: 1.1.0
-# Add date-released and the version-specific DOI after Zenodo mints v1.1.0.
+date-released: 2026-09-29
+doi: 10.5281/zenodo.23028694
 repository-code: "https://github.com/wongi-hash/brier-contrast-partial-identification"
 url: "https://github.com/wongi-hash/brier-contrast-partial-identification"
 preferred-citation:
