@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the paper below."
-title: "Reproducibility package (results & tables): Sharp partial identification of direct Brier-risk contrasts under conditional outcome shift"
+title: "Reproducibility package: Sharp Partial Identification for Survival Model Comparison Without Target Outcomes"
 authors:
   - family-names: Choi
     given-names: Won Gi
@@ -19,7 +19,7 @@ repository-code: "https://github.com/wongi-hash/brier-contrast-partial-identific
 url: "https://github.com/wongi-hash/brier-contrast-partial-identification"
 preferred-citation:
   type: unpublished
-  title: "Comparing Survival Prediction Models without Target Outcomes: Sharp Partial Identification of Direct Brier-Risk Contrasts under Conditional Outcome Shift"
+  title: "Sharp Partial Identification for Survival Model Comparison Without Target Outcomes"
   year: 2026
   notes: "Manuscript in preparation (2026); not yet accepted or published. Intended submission to Statistics in Medicine."
   authors:

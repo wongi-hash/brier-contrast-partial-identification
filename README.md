@@ -1,8 +1,6 @@
-# Direct Brier-risk contrast partial identification
+# Sharp Partial Identification for Survival Model Comparison Without Target Outcomes
 
-Reproducibility materials for **Comparing Survival Prediction Models without
-Target Outcomes: Sharp Partial Identification of Direct Brier-Risk Contrasts
-under Conditional Outcome Shift**.
+Reproducibility materials for the manuscript **Sharp Partial Identification for Survival Model Comparison Without Target Outcomes**.
 
 The repository follows the terminology and analysis structure used in the
 manuscript. It contains statistical code, public-data pipelines, synthetic
