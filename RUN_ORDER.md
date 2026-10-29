@@ -9,6 +9,11 @@
 | NSCLC horizon sensitivity | `results/nsclc/horizon_sensitivity.csv` | `code/nsclc/run_horizon_sensitivity.py` (restricted inputs required) |
 | NSCLC outcome-free evaluation | `results/nsclc/outcome_free_evaluation.csv` | `code/nsclc/run_outcome_free_evaluation.py` (restricted inputs required; synthetic fixture public) |
 | Rotterdam–GBSG supporting analysis | `results/applications/direct_vs_separate.csv` | `code/rotterdam_gbsg/run_public_pipeline.py` |
+| One-step simulation (Web Table 16) | `results/onestep/simulation_summary.csv`, `results/onestep/simulation_replicates/`, `results/onestep/population_limit_bias.json` | `code/onestep/run_onestep_simulation.py`, `code/onestep/population_limit_bias.py` |
+| One-step applications (Web Table 17) | `results/onestep/applications.csv` | `code/onestep/run_onestep_applications.py` (NSCLC rows: restricted inputs) |
+| Scalar diagnostic κ and robustness values (Web Table 1) | `results/scalar_diagnostics/web_table_1.csv` | `code/scalar_diagnostics/run_scalar_kappa_robustness.py` (NSCLC rows: restricted inputs) |
+| Biometrics Web Tables 1, 16, 17 | `tables/biometrics/` | `build_biometrics_tables.py` |
+| Biometrics Figure 4 and Web Figure 2 | `figures/biometrics/` | `build_biometrics_figures.py` |
 
 ## Portable smoke checks
 
@@ -24,6 +29,19 @@ python validate_release.py
 Regenerated figures are written to `build/figures/`; committed reference
 figures under `figures/` are not overwritten. `validate_release.py` verifies
 the complete `SHA256SUMS.txt` ledger before checking numerical claims.
+
+## One-step estimator and scalar diagnostics (v1.2.0)
+
+```bash
+python code/onestep/run_onestep_simulation.py run --law A --scale nsclc   # repeat for B and for --scale rott
+python code/onestep/run_onestep_simulation.py aggregate
+python code/onestep/population_limit_bias.py
+python code/onestep/run_onestep_applications.py --rotterdam                # after run_public_pipeline.py
+python code/onestep/run_onestep_applications.py --nsclc-input-root <root>  # restricted inputs
+python code/scalar_diagnostics/run_scalar_kappa_robustness.py --rotterdam --nsclc-input-root <root>
+python build_biometrics_tables.py
+python build_biometrics_figures.py
+```
 
 ## Full application-scale simulation
 

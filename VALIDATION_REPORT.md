@@ -1,5 +1,35 @@
 # Validation report
 
+## Version 1.2.0 additions (checked 2026-10-28)
+
+- **Exact reproduction of archived bootstrap draws.** With the archived seeds in
+  `code/inference/archived_bootstrap_seeds.json`, the unchanged public runners
+  reproduced all 80 rows of `results/nsclc/outcome_free_evaluation.csv` (restricted
+  inputs) and all 20 rows of `tables/Table_S4_Rotterdam_GBSG_decisions.csv`.
+  The maximum absolute difference was below 3e-16, and every decision agreed.
+  The Rotterdam–GBSG check used analysis inputs identical to those of the archived
+  analysis. R was not available on the checking host, so the R export stage was not
+  rerun.
+- **One-step simulation.** Re-executing committed replications reproduced the stored
+  records exactly. `results/onestep/simulation_summary.csv` is regenerated
+  bit-for-bit from `results/onestep/simulation_replicates/`.
+- **One-step applications.** `results/onestep/applications.csv` reproduces the
+  committed plug-in envelopes for all 60 primary cells, with a maximum absolute
+  difference below 2e-16. One-step and plug-in decisions agree in all 60 cells.
+- **Web Table 1.** `results/scalar_diagnostics/web_table_1.csv` matches the
+  manuscript Web Table 1, and |width ratio − κ| ≤ 0.002 in all 12 settings.
+- **Biometrics artwork.** `build_biometrics_figures.py` regenerates Figure 4 and
+  Web Figure 2 pixel-identically to `figures/biometrics/`.
+- **Smoke checks.** The following code paths completed:
+  - `run_onestep_simulation.py smoke`;
+  - `run_onestep_applications.py --nsclc-synthetic`;
+  - `run_scalar_kappa_robustness.py --nsclc-synthetic`;
+  - `run_outcome_free_evaluation.py --synthetic`;
+  - `build_biometrics_tables.py`;
+  - `build_biometrics_figures.py`.
+
+## Version 1.1.0
+
 The release candidate is checked at four levels.
 
 ## Numerical invariants

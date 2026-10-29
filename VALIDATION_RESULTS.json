@@ -1,15 +1,16 @@
 {
   "status": "PASS_MANUSCRIPT_ALIGNED_RELEASE_AUDIT",
   "checks": [
-    "SHA256SUMS ledger (98 files)",
+    "SHA256SUMS ledger (144 files)",
     "primary-implementation coverage values",
     "application-scale comparator aggregate",
     "controlled-geometry illustration",
     "NSCLC outcome-free aggregate",
     "Rotterdam\u2013GBSG supporting analysis",
+    "v1.2.0 one-step, scalar-diagnostic, and Biometrics artwork outputs",
     "figures and tables",
     "privacy, credential, local-path, and terminology scan"
   ],
-  "public_file_count": 100,
+  "public_file_count": 146,
   "note": "Clean-environment and Git-history tests are documented in VALIDATION_REPORT.md."
 }

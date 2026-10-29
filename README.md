@@ -1,6 +1,12 @@
 # Sharp Partial Identification for Survival Model Comparison Without Target Outcomes
 
-Reproducibility materials for the manuscript **Sharp Partial Identification for Survival Model Comparison Without Target Outcomes**.
+Reproducibility materials for **Sharp Partial Identification for Survival Model
+Comparison Without Target Outcomes** (submitted to *Biometrics*; earlier working
+title: *Comparing Survival Prediction Models without Target Outcomes: Sharp
+Partial Identification of Direct Brier-Risk Contrasts under Conditional Outcome
+Shift*). Version 1.2.0 adds the analyses introduced for the Biometrics
+manuscript; `BIOMETRICS_NUMBERING.md` maps every Biometrics figure and table to
+its committed file and generator.
 
 The repository follows the terminology and analysis structure used in the
 manuscript. It contains statistical code, public-data pipelines, synthetic
@@ -19,6 +25,9 @@ individual predictions, or medical images.
 | NSCLC outcome-free evaluation | `code/nsclc/` |
 | Rotterdam–GBSG supporting survival analysis | `code/rotterdam_gbsg/` |
 | Figures and tables | `build_figures.py`, `build_tables.py` |
+| One-step endpoint estimator (Web Appendix A.7; Web Tables 16–17) | `code/onestep/` |
+| Scalar versus profile-varying diagnostic κ (Web Table 1) | `code/scalar_diagnostics/` |
+| Biometrics figures and Web Tables 1, 16, 17 | `build_biometrics_figures.py`, `build_biometrics_tables.py`, `figures/biometrics/`, `tables/biometrics/` |
 
 ## NSCLC data boundary
 
@@ -40,6 +49,10 @@ python code/nsclc/run_outcome_free_evaluation.py --synthetic --bootstrap 9 --out
 python code/simulations/application_scale_comparator/run_all.py --smoke --output _check/comparator
 python build_tables.py
 python build_figures.py
+python code/onestep/run_onestep_simulation.py smoke
+python code/onestep/run_onestep_applications.py --nsclc-synthetic --bootstrap 9 --out _check/onestep/applications.csv
+python build_biometrics_tables.py
+python build_biometrics_figures.py
 python validate_release.py
 ```
 
@@ -87,7 +100,26 @@ validation.
   80 and sensitivity parameter 0.2: `3.44 / 3.44 / 3.62 / 3.43`;
 - controlled-geometry width ratios: `1.00 / 1.22 / 1.61 / 2.46 / 5.73`;
 - NSCLC: DEFER across all prespecified primary and SRDO sensitivity
-  configurations.
+  configurations;
+- one-step versus plug-in (Web Table 17): identical decisions in all 60
+  application cells; Rotterdam–GBSG seed 62, γ = 0.2 one-step envelope
+  `[-0.0486, -0.0010]`;
+- one-step simulation (Web Table 16): outer coverage `0.863 / 0.844` (law A,
+  NSCLC scale, plug-in / one-step), `0.957 / 0.957` (law B, Rotterdam–GBSG
+  scale).
+
+## Exact reproduction of archived bootstrap draws (v1.2.0)
+
+In v1.1.0 the public runners derived bootstrap seeds from the renamed public
+labels, whereas the committed NSCLC and Rotterdam–GBSG results had been
+computed with the seeds of the archived analysis. Rerunning v1.1.0 therefore
+reproduced the identified sets and the decisions (verified for all 20 Rotterdam–GBSG cells) but not every envelope digit
+(for example, Rotterdam–GBSG seed 62, γ = 0.2 gave `[-0.0493, -0.0010]` instead
+of the committed `[-0.0486, -0.0017]`). Version 1.2.0 stores the archived
+integer seeds in `code/inference/archived_bootstrap_seeds.json`; with B = 999
+the public runners now reproduce `results/nsclc/outcome_free_evaluation.csv`
+and `tables/Table_S4_Rotterdam_GBSG_decisions.csv` to floating-point precision.
+For other values of B the label-derived seeds are used as before.
 
 ## Restricted-input supplementary analyses
 
@@ -114,6 +146,7 @@ See `RUN_ORDER.md` for code-to-result traceability and
 - Zenodo concept DOI: https://doi.org/10.5281/zenodo.22807124
 - Version 1.0.0 DOI: https://doi.org/10.5281/zenodo.22807125
 - Version 1.1.0 DOI: https://doi.org/10.5281/zenodo.23028694
+- Version 1.2.0 DOI: https://doi.org/10.5281/zenodo.23750710
 
 The next version will be published only after final validation and explicit
 approval.

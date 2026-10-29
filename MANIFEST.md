@@ -5,21 +5,31 @@ set of tracked or unignored files that Git would include. `MANIFEST.md` and
 `SHA256SUMS.txt` are excluded from their own hash input. Ignored local smoke
 outputs, public-data working files, restricted inputs, and `.git/` are absent.
 
-Intended public files hashed: **98**.
+Intended public files hashed: **144**.
 
 | SHA-256 | Bytes | Relative path |
 |---|---:|---|
 | `f17bdb0bbd1df417d32b476302913409cafc2a9d55e672856e757dcbdf4ed5bb` | 411 | `.gitattributes` |
 | `04e1849db8135b313a31687fc6e925917c75ab98dc58c4402eb2c1e8bb0ba1b5` | 1349 | `.gitignore` |
+| `2048c503f4bb2b6b13bf9a37c34367f39966fe16df82daa99a05e50cc8bdcd13` | 3475 | `BIOMETRICS_NUMBERING.md` |
+| `1f7c8f9d232a55be6c144fe4d2a1ab0dbd0ea9152f9e73c3d25562410c3faa65` | 6334 | `build_biometrics_figures.py` |
+| `51489be99e91631c283a02d0ff06770fb69d97e10c88f81374fe7fa8eaab5f4c` | 4246 | `build_biometrics_tables.py` |
 | `de6c0b938b05a5c93001453e6dff9095ae21679bbeda52382fe5f4cebc4da3f8` | 26490 | `build_figures.py` |
 | `e842472b2558f1785a603a0168dde1af001473a28867e5a8f9aea9b2e422e285` | 2522 | `build_release_manifest.py` |
 | `d5576a38f46ea9becbd0425b659989791f4f24677e4132cd26ba3b810c487f0b` | 1688 | `build_tables.py` |
-| `33f248b5b9eda054161cab7bb5ef31f06495e6d17201967e8fc8048292d93218` | 1287 | `CHANGELOG.md` |
-| `b60b29f903380336ae1ebe3365dc8d4f3d28d3cd604f979512d9b221828faba6` | 1164 | `CITATION.cff` |
-| `ddb28c9012243bfa5e92418d665b630bc70466db26824b4839c0218cf7ae7ac2` | 10918 | `code/inference/direct_vs_separate.py` |
+| `c655a128bfde482385d65b4d7f41723f7dd4eca5ec80d79183f4c35984ae9f15` | 2488 | `CHANGELOG.md` |
+| `3e9325e957abddd4646b15bfae5d9e44e95cfce05942b300eb0f240efae5a670` | 1126 | `CITATION.cff` |
+| `6403d05423401ed5a013c0f349f330900e790cbf9a0cf219d328bc57880d08f6` | 1641 | `code/inference/archived_bootstrap_seeds.json` |
+| `d1bff7854358742d05a9ff2bdcd9a74eb433450a7098286c3837bca622673dc4` | 11758 | `code/inference/direct_vs_separate.py` |
 | `48a75448d73d35de3c49c676725dd2261386a08d78d8200549f8c2cdcbae188f` | 987 | `code/nsclc/input_schema.md` |
 | `e6a4f86418ae2a8613b6ddf593dbc45ed67e821fecdac4eabaa08100945eba00` | 7350 | `code/nsclc/run_horizon_sensitivity.py` |
 | `fecf44db3035e355140fff7194b406bd1d0a4dcdcb25f1de567cd1d3c1748f0a` | 5109 | `code/nsclc/run_outcome_free_evaluation.py` |
+| `2bc1e5efe1140b244b9d8df967a7528c72057fb126d94585c585542cf1a02b21` | 6296 | `code/onestep/onestep_core.py` |
+| `3bbe67a021287141d57b7abb2fa8f6b82454c6982a707b7720c3c00dcf58887d` | 2050 | `code/onestep/population_limit_bias.py` |
+| `2876a69f62fab1d837c171ed35bdc112f2296c01c9ee890ea1a0211ccde49bbb` | 4067 | `code/onestep/PROTOCOL.md` |
+| `7ff7730dfd1909c763404eef645e33d16fb73d1176e930a200bd3f412ec48ebe` | 2219 | `code/onestep/README.md` |
+| `b3226abbc70d06ed3dba3f4181e14de5c75144168b17fe5382148d2e9ab7e707` | 6060 | `code/onestep/run_onestep_applications.py` |
+| `6b7df654a334f5bb41a82c6f13fbde6f948b7f3278745cf6569af3b56f43e450` | 9634 | `code/onestep/run_onestep_simulation.py` |
 | `9ae09e070d0ba2653bc9034bd49832cb9e0f3bfa0aa576ee7af23c197050f60a` | 879 | `code/rotterdam_gbsg/00_export_survival_data.R` |
 | `d5d04cb62fc5b21466d822c425d516df3dd292240ace252d7a489b0f82a0a49b` | 4565 | `code/rotterdam_gbsg/01_prepare_locked_predictors.py` |
 | `28096e2eb5516493ebb59a1e31533dc7adeae878bbd3421066fe337393c13a6d` | 3570 | `code/rotterdam_gbsg/02_run_outcome_free_evaluation.py` |
@@ -29,6 +39,7 @@ Intended public files hashed: **98**.
 | `182de371613fc67f6d8a0ee4d20c24739eca562c294acb60bfbbb0d46aae6a73` | 1041 | `code/rotterdam_gbsg/README.md` |
 | `4c08d417d655f43197ee6371e824b827c9b65ebf63daa8bb6ce8e47290a40ff7` | 1429 | `code/rotterdam_gbsg/run_public_pipeline.py` |
 | `551dfa795ca8bc72e50893e8c392b7fd013f6ffaa1083b5cb42df989a287e0c9` | 2305 | `code/rotterdam_gbsg/supporting_analysis_specification.md` |
+| `3ba57355e819fa8607e47c7778d365764002af7cc2400311e6ec100b8ee549c2` | 4278 | `code/scalar_diagnostics/run_scalar_kappa_robustness.py` |
 | `8c88a348fa8bcfaf115b8b06205db73469c30479a05bc384d5ac9eef17ce3aa6` | 10642 | `code/simulations/application_scale_comparator/aggregate_results.py` |
 | `afec726eeb9074ea6556275416ce1ff045871395116e48a0d1911ea1b803b00b` | 2686 | `code/simulations/application_scale_comparator/run_all.py` |
 | `0f333185572c4661a1000cfd7cc40b6b697b89d78c275ad1671e9aee75db7cae` | 3106 | `code/simulations/application_scale_comparator/run_candidate_superior_mirror.py` |
@@ -41,6 +52,29 @@ Intended public files hashed: **98**.
 | `4e66cdae7f882fa6a46793a457350731ebba7778199ddd50ab9419ee42a6eb9a` | 2316 | `code/simulations/primary_implementation_coverage/run_nsclc_scale_parallel.py` |
 | `b2806fcf2b3bbbc7067aade349e2710653cad49387d695af11c025981f2a4b14` | 2936 | `code/simulations/primary_implementation_coverage/run_rotterdam_gbsg_scale.py` |
 | `c61a745e762e979b0598b1935b57c018d3cf8329a82a7dc8b86f55c607dee132` | 3080 | `code/simulations/primary_implementation_coverage/run_rotterdam_gbsg_scale_parallel.py` |
+| `0d2a5771802b0b01691d7c5f47a1f3c5c5963b5ba2c19da863a19917d6b988f2` | 1074623 | `figures/biometrics/Figure_1.pdf` |
+| `70ca776d10af86458b9ad041ea152c0e148cf9aa5c3d1478d146e81d6d459111` | 1200366 | `figures/biometrics/Figure_1.png` |
+| `465a9e0d4feb40140d2edaa096b6006d5dd722f337628fb0ebb3be3ba8df2377` | 3966354 | `figures/biometrics/Figure_1.tiff` |
+| `ae2c6b005c09e4692933a6927ba6b0e7e9ab7df4541967b51960328e88a545df` | 29612 | `figures/biometrics/Figure_2.eps` |
+| `86114c4c3ab6b73ca9f42adaa6c2ee9b02908f5db5de8cd348ebb5d01c254379` | 41807 | `figures/biometrics/Figure_2.pdf` |
+| `2f260b342f907feadb039111ec329c4a4e82c6792b8df99249e8cb99eef7cdf9` | 307129 | `figures/biometrics/Figure_2.png` |
+| `9175eaa2115ef7b3df7c56a28ab225c160433c08494aed44e13be00c9b53f3d6` | 1370292 | `figures/biometrics/Figure_2.tiff` |
+| `7df282ff7fa63a81fe0ff76937808b8d66068dc6107052b96c350970fb62168d` | 20422 | `figures/biometrics/Figure_3.eps` |
+| `9fdc9f1b9fc6b92dfc7f13bb2af6c5d10c11b672347e63f7a4935ae9c64b3dde` | 35920 | `figures/biometrics/Figure_3.pdf` |
+| `e2aee78a5054d92aa0900ac290934b05419186d1c1a5cc76f91586ab3367147c` | 241666 | `figures/biometrics/Figure_3.png` |
+| `8d5fcc58831892c86eeec46b4340c41272790ca531617a76cea7a8b2ebd9e315` | 952112 | `figures/biometrics/Figure_3.tiff` |
+| `fcabcdbf58707af5614ae961924c03ee94829e3fcc4fe3ba82699490221932d5` | 13366 | `figures/biometrics/Figure_4.eps` |
+| `7120adec078c21ebe84f1f106f09d96767fb28af1999bd81e1e847080ae074d3` | 27677 | `figures/biometrics/Figure_4.pdf` |
+| `13a4dfb323348b0d2fdd71967c8404d0af7c50dfc981e1e7ea8690f4f02d3b1c` | 124198 | `figures/biometrics/Figure_4.png` |
+| `a8ee7ef9ea4a054231af20bcb4742c45f7f8b30ff8d450effce0a872f5e8a0d1` | 525816 | `figures/biometrics/Figure_4.tiff` |
+| `17284570c92e13018e3da5d44a30d26421f6ec3801f43b4b825339d50d5be069` | 37983 | `figures/biometrics/Web_Figure_1.eps` |
+| `8371237afec63dbd47541fdcd18c40650b1a2e8a35c3931f72c502b281dbc229` | 46670 | `figures/biometrics/Web_Figure_1.pdf` |
+| `289394711abd68d8b6e468c2b95b4c717312639d5be44a402b7f5cd37f42047c` | 465577 | `figures/biometrics/Web_Figure_1.png` |
+| `5f225c04227e3b402dcd2a644a3ffde5f5899dced47d85e762884e59f43b6e9e` | 1942816 | `figures/biometrics/Web_Figure_1.tiff` |
+| `596561e0a49168593676b2b8e8dda4a74bc27ef47ed45a2ef08c69f3b9046e2d` | 26259 | `figures/biometrics/Web_Figure_2.eps` |
+| `580fe27cb255db63eaaa80c9852a378be500d07e51a1925d7332efac860130fb` | 26794 | `figures/biometrics/Web_Figure_2.pdf` |
+| `fa76f31d9a744aeb0890b967af8069665d1c7e1029f996d3d7dccdf93b30e76a` | 348490 | `figures/biometrics/Web_Figure_2.png` |
+| `f2c81900c369c69f08f3e3d46f4f7868863735d85baf732d60d8e1252bb12ba5` | 1866072 | `figures/biometrics/Web_Figure_2.tiff` |
 | `8adde16e8451963f4edd54791573afb159ce2f445c789bdcf8b24589d3f2bd42` | 39714 | `figures/Figure_1.eps` |
 | `3b20d55ea78631ee28db1bb70bcc0be507f32f6223eb7975416d309d6808a397` | 78994 | `figures/Figure_1.pdf` |
 | `b36776d35415ccd51bb0eb4b6fe35974667e19443924183adadb5c216045829e` | 582656 | `figures/Figure_1.png` |
@@ -66,13 +100,21 @@ Intended public files hashed: **98**.
 | `0d3f9b276b040477a23983280641545785057c0acab7bbc01098ddb62a858157` | 248742 | `figures/Figure_S2.png` |
 | `227d254f1e198af85692d5a4f8cc4faa8da234e8e4698f42c0846b632c593da9` | 1705718 | `figures/Figure_S2.tiff` |
 | `2c2d7b37b037c060065d9dd9d6a2dfb02871927737ade0cc3be67a6eb5fa6a75` | 1123 | `LICENSE` |
-| `ae3975124aba7a09c78303af4982cde9a33e272442fe10b493137a0b3fff5e20` | 5128 | `README.md` |
+| `19c92d1b58f8d13f1c9366f95070bf567625d1b5f89c5d750a381ce1ecb6089e` | 7336 | `README.md` |
 | `5fc80e10ad277ffcb90d90149ee98025fb2f485dee659249d808a6bdbc101eac` | 254 | `requirements-locked-py38.txt` |
 | `9260cb36e3a60e1e62d109b270151c0e79fbbd5e044d3c720c864d65a235efc9` | 295 | `requirements.txt` |
 | `befba9fef622d1a582b8456cfafd48d49c0de8cf71800c92091df038a811d9ac` | 51676 | `results/applications/direct_vs_separate.csv` |
 | `62ed941856dea60ca8e63a865ac0c006c70ecf9eee482f253dc43b41900475dc` | 88422 | `results/nsclc/horizon_sensitivity.csv` |
 | `a99cab23d1fb4fb826a0be4271638e622d1260818cf77f771181256e7a539e43` | 731 | `results/nsclc/manifest.json` |
 | `07c480cc210742fb33a426f752475087c063c3e94e5dac184739d53698343c52` | 41214 | `results/nsclc/outcome_free_evaluation.csv` |
+| `55e613b40e1b5f4cb0c9cb5101475ca3de90dbc08e20282f71cf3af01887b579` | 17625 | `results/onestep/applications.csv` |
+| `45617a75ec414265017b6e0c18655cbf663f51fa30b29cb294673b44be365c77` | 373 | `results/onestep/population_limit_bias.json` |
+| `554de88880f38b79a7e5f45a2ebfdbf40197e4335081060c037b06fef12ca3d6` | 943629 | `results/onestep/simulation_replicates/lawA_nsclc_scale.jsonl` |
+| `7fac8a2f1df44bac1451b513e971c22b290a6222d47b0f67b73c046a3bc99aff` | 947357 | `results/onestep/simulation_replicates/lawA_rotterdam_gbsg_scale.jsonl` |
+| `a6d60c923d7925e2ac94063d3ceaa5b448d37526e20b3a3b79527ec374005699` | 944645 | `results/onestep/simulation_replicates/lawB_nsclc_scale.jsonl` |
+| `eea91095fac147ad4fae1b7f0e0ac02b19a583617c40084f3a4d82f5dcccaeb2` | 948601 | `results/onestep/simulation_replicates/lawB_rotterdam_gbsg_scale.jsonl` |
+| `dc4f46a14617366cada73a194eedde10f254ca813dea4e0c7bf3ccee3413d134` | 11883 | `results/onestep/simulation_summary.csv` |
+| `4b68a62fe055f26e3f0bb51413231e403a3fb6d0233e5a4b3545b8dd4ed36de5` | 1740 | `results/scalar_diagnostics/web_table_1.csv` |
 | `0c8e4ba2439fdec7b5bd941e188d566d2cd91f3a6723320d485cc19d7057fc42` | 94434 | `results/simulations/application_scale_comparator.csv` |
 | `1a0ca6d46fd384618dad21baae4834e618b37eec8355c2ae2f24cdde4d9b8741` | 438 | `results/simulations/controlled_geometry.csv` |
 | `5b3e527d576e13091cf0f560522521d7e7822e86f18265c31411d92cf657d48c` | 750 | `results/simulations/decision_regime/ambiguous_conditional.json` |
@@ -92,21 +134,25 @@ Intended public files hashed: **98**.
 | `19a991b5e3106bac8b2683cbe0d474993ba06d4af5aab05471c25b6e5a574c10` | 660 | `results/simulations/primary_implementation_execution.json` |
 | `3eb40c5165b560599e14510ddf6680a266302f78ad0ce697078d568a7bd36676` | 584 | `results/simulations/rotterdam_gbsg_scale_coverage.csv` |
 | `e814dae0fa1246588434ee1e7cc7f14335225e14c4e3818e6e489a9561bcd41b` | 563 | `results/simulations/rotterdam_gbsg_scale_manifest.json` |
-| `7a1a5b2677a622220878a9dd38aae7ac2fa772e018ef0b230225ee3470014a98` | 2688 | `RUN_ORDER.md` |
+| `0ca5f4958afe896178214b521eef18b9dbce0e1632c6ca69640887ec850f3a45` | 4132 | `RUN_ORDER.md` |
 | `ffdf0101e78d680629ba439c151dcdfcd30356f387dd52a93ed15797d9100c3c` | 5709 | `synthetic_fixture/expected_output/gamma_sweep_direct_separate.csv` |
 | `f44343434b9e873a95727c21edf934beb634a0d72630ab206c1752f9b3f19555` | 3205 | `synthetic_fixture/expected_output/MANIFEST.json` |
 | `dd5729dd79f55c72469553acd72d41d297ef5921c06ffd6f6d75cccf49023f12` | 7289 | `synthetic_fixture/nsclc/pet_radiomic_candidate/seed42/calibration_Stanford.csv` |
 | `79b27b785fb582407c1b002380b4adbb763a0d7bf0ce6b632f8dd6839d02d7b4` | 7292 | `synthetic_fixture/nsclc/pet_radiomic_candidate/seed42/calibration_VA.csv` |
 | `72222f4634718c0a926a14d8e989f9ec473b9451e98adc450020066c677a7561` | 2609 | `synthetic_fixture/nsclc/pet_radiomic_candidate/seed42/target_Stanford.csv` |
 | `a0169e6b19c7a654cd6774be1d5eb1d93cbf5f8d34b55d3807c13a5c36f07e90` | 3464 | `synthetic_fixture/nsclc/pet_radiomic_candidate/seed42/target_VA.csv` |
+| `8eebf50c3040d2335cac145e6996a654f3e1d43e08760d042a223f2b0d516866` | 980 | `tables/biometrics/Web_Table_01_scalar_vs_profile_varying.csv` |
+| `d3ef0f3481debb765cb65354d52c1726a081a1737aa97c4d8fd5243fdf884329` | 846 | `tables/biometrics/Web_Table_16_onestep_simulation.csv` |
+| `45617a75ec414265017b6e0c18655cbf663f51fa30b29cb294673b44be365c77` | 373 | `tables/biometrics/Web_Table_16_population_limit_bias.json` |
+| `9cbefdde133c7dc60ad63223cb1a9acc61dfd9fad8e8f3ea821b839a445a8f44` | 1241 | `tables/biometrics/Web_Table_17_onestep_applications.csv` |
 | `0e02233e44d1a889405517389cf26332c5d0c6a35a679623d92ad2c96a685fba` | 5480 | `tables/Table_1_application_scale_comparator.csv` |
 | `41f43bbf8589b38a4761bb012069babdbdc0bf2433f6297ecf7f89d1107f0d97` | 2453 | `tables/Table_3_NSCLC_outcome_free_evaluation.csv` |
 | `f5d3bbbd498cafaddf0aa1cafc89fc23199450d8cbf4f74cdbf0abca4ff39ff2` | 10847 | `tables/Table_S4_Rotterdam_GBSG_decisions.csv` |
 | `361f73e6d3ffdde8623f587b8b6944d1e2718bf88ce07356ba172469d007bf5d` | 2694 | `tables/Table_S5_decision_regimes.csv` |
 | `480e01e69ddb37ef5454257f4567d0eb750387fc57f0bec0861c6c08becc7dbd` | 589 | `tables/Table_S9_primary_implementation_coverage.csv` |
-| `50d94327ea77bcced4fd67735c509adbefe0a7d7f2d7d1a88a80a795e5a40ba7` | 7057 | `validate_release.py` |
-| `f85d01ad14255fea4b0da0d768ba2efdb76709d5f3670e87d2c4a254c451b719` | 2892 | `VALIDATION_REPORT.md` |
-| `fc9757ee121bc58fbd613f371b448b0f30d3d34678a0facc099d1b6468c8ecbc` | 546 | `VALIDATION_RESULTS.json` |
+| `f11fab355c7c73f40826ec814d94ca1f261b1f7f36a7f51a54edc96d134b0d1a` | 9922 | `validate_release.py` |
+| `02327826734c8de989338d046317c9481f7ae08ec08474438c986634cafc3733` | 4617 | `VALIDATION_REPORT.md` |
+| `fb8a3c08b8482325b9cc1db60986b9d6c0b602644b91168a1bbe8a39fd6af191` | 622 | `VALIDATION_RESULTS.json` |
 
 No institutional patient-level inputs or raw images are intentionally included.
 No local executable path, user directory, or institutional filesystem path

@@ -1,0 +1,25 @@
+{
+  "description": "Integer bootstrap seeds used by the archived manuscript analyses (B = 999). Public runners pass these seeds to analyze() so that reruns reproduce the committed bootstrap draws exactly. Keys are dataset|public_contrast_label|seed|B. For any other key the seed is derived from the public labels as before.",
+  "seeds": {
+    "NSCLC-Stanford|pet_radiomic_candidate|42|999": 2625662205,
+    "NSCLC-Stanford|pet_radiomic_candidate|52|999": 2855305523,
+    "NSCLC-Stanford|pet_radiomic_candidate|62|999": 1261823542,
+    "NSCLC-Stanford|pet_radiomic_candidate|72|999": 3183672036,
+    "NSCLC-Stanford|pet_radiomic_candidate_srdo|42|999": 4291581753,
+    "NSCLC-Stanford|pet_radiomic_candidate_srdo|52|999": 3380138244,
+    "NSCLC-Stanford|pet_radiomic_candidate_srdo|62|999": 1568378938,
+    "NSCLC-Stanford|pet_radiomic_candidate_srdo|72|999": 2047586301,
+    "NSCLC-VA|pet_radiomic_candidate|42|999": 3174212998,
+    "NSCLC-VA|pet_radiomic_candidate|52|999": 1375696199,
+    "NSCLC-VA|pet_radiomic_candidate|62|999": 1942501420,
+    "NSCLC-VA|pet_radiomic_candidate|72|999": 1034080935,
+    "NSCLC-VA|pet_radiomic_candidate_srdo|42|999": 1790803340,
+    "NSCLC-VA|pet_radiomic_candidate_srdo|52|999": 2424308129,
+    "NSCLC-VA|pet_radiomic_candidate_srdo|62|999": 786431724,
+    "NSCLC-VA|pet_radiomic_candidate_srdo|72|999": 4194114642,
+    "Rotterdam-GBSG|supporting_clinical_candidate|42|999": 3577638262,
+    "Rotterdam-GBSG|supporting_clinical_candidate|52|999": 189564445,
+    "Rotterdam-GBSG|supporting_clinical_candidate|62|999": 870478261,
+    "Rotterdam-GBSG|supporting_clinical_candidate|72|999": 1846325521
+  }
+}

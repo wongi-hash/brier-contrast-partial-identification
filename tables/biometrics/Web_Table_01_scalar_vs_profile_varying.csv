@@ -1,0 +1,13 @@
+Setting,Seed,P_T(q1>q0),Profile-varying width,Scalar width,Width ratio,kappa,Favored at gamma=0,Robustness value profile-varying,Robustness value scalar
+NSCLC-Stanford,42,0.95,0.01269,0.01203,0.948,0.948,Reference,0.27,0.285
+NSCLC-Stanford,52,0.92,0.00859,0.00659,0.767,0.768,Reference,0.755,1.11
+NSCLC-Stanford,62,0.6,0.00901,0.002,0.222,0.223,Candidate,0.34,1.405
+NSCLC-Stanford,72,0.9,0.00684,0.00463,0.677,0.677,Candidate,0.41,0.55
+NSCLC-VA,42,0.9,0.01622,0.01266,0.78,0.78,Reference,0.98,1.7
+NSCLC-VA,52,0.9,0.01246,0.00744,0.597,0.597,Reference,0.885,2.365
+NSCLC-VA,62,0.79,0.00891,0.0007,0.079,0.081,Candidate,0.47,1.775
+NSCLC-VA,72,0.88,0.0077,0.00436,0.566,0.565,Candidate,0.57,0.825
+Rotterdam-GBSG,42,0.47,0.02094,0.00158,0.075,0.075,Candidate,0.455,1.75
+Rotterdam-GBSG,52,0.47,0.02279,0.00215,0.094,0.094,Candidate,0.335,1.42
+Rotterdam-GBSG,62,0.46,0.02091,0.00105,0.05,0.049,Candidate,0.47,1.915
+Rotterdam-GBSG,72,0.46,0.0232,0.00155,0.067,0.067,Candidate,0.285,1.385

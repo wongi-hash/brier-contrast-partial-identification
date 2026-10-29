@@ -205,12 +205,30 @@ def action(lower, upper):
     return "DEFER"
 
 
-def analyze(dataset, contrast, seed, cal, target, tau, boot):
+ARCHIVED_SEEDS_FILE = Path(__file__).resolve().parent / "archived_bootstrap_seeds.json"
+
+
+def archived_bootstrap_seed(dataset, contrast, seed, boot):
+    """Return the archived integer bootstrap seed for a manuscript cell, or None."""
+    if not ARCHIVED_SEEDS_FILE.is_file():
+        return None
+    table = json.loads(ARCHIVED_SEEDS_FILE.read_text(encoding="utf-8"))["seeds"]
+    return table.get(f"{dataset}|{contrast}|{int(seed)}|{int(boot)}")
+
+
+def analyze(dataset, contrast, seed, cal, target, tau, boot, rng_seed=None):
+    """rng_seed: optional integer bootstrap seed. If None, the archived seed for this
+    manuscript cell is used when available (archived_bootstrap_seeds.json); otherwise
+    the seed is derived from the public labels."""
     ps, gdiag = fit_predict_ps(cal, target, tau)
     q0 = target.q0.to_numpy(float)
     q1 = target.q1.to_numpy(float)
     points = all_endpoints(q0, q1, ps)
-    rng = np.random.default_rng(stable_seed("harmonize-c4", dataset, contrast, seed, boot))
+    if rng_seed is None:
+        rng_seed = archived_bootstrap_seed(dataset, contrast, seed, boot)
+    if rng_seed is None:
+        rng_seed = stable_seed("harmonize-c4", dataset, contrast, seed, boot)
+    rng = np.random.default_rng(rng_seed)
     draws = {m: np.empty((boot, len(GAMMA_GRID), 2)) for m in points}
     valid = 0
     failures = []

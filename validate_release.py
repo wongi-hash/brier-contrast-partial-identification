@@ -93,6 +93,37 @@ def main():
     need(len(flip) == 1 and flip.iloc[0].action_dir == "ADOPT" and flip.iloc[0].action_sep == "DEFER", "Rotterdam–GBSG decision difference")
     checks.append("Rotterdam–GBSG supporting analysis")
 
+    onestep_apps = pd.read_csv(ROOT / "results/onestep/applications.csv")
+    need(len(onestep_apps) == 60, "one-step applications must have 60 cells")
+    need((onestep_apps.plugin_action == onestep_apps.onestep_action).all(), "one-step and plug-in decisions agree in all cells")
+    committed = pd.concat([
+        nsclc[nsclc.contrast == "PET_radiomic_candidate"],
+        applications[(applications.dataset == "Rotterdam-GBSG") & (applications.contrast == "supporting_clinical_candidate")],
+    ])[["dataset", "seed", "gamma", "dir_sim_lower", "dir_sim_upper", "action_dir"]]
+    merged = onestep_apps.merge(committed, on=["dataset", "seed", "gamma"])
+    need(len(merged) == 60, "one-step applications aligned with committed plug-in rows")
+    need(np.allclose(merged.plugin_env_lower, merged.dir_sim_lower, atol=1e-12)
+         and np.allclose(merged.plugin_env_upper, merged.dir_sim_upper, atol=1e-12)
+         and (merged.plugin_action == merged.action_dir).all(), "one-step plug-in columns reproduce committed envelopes")
+    cell = onestep_apps[(onestep_apps.dataset == "Rotterdam-GBSG") & (onestep_apps.seed == 62) & np.isclose(onestep_apps.gamma, .2)].iloc[0]
+    need(np.allclose([cell.onestep_env_lower, cell.onestep_env_upper], [-0.0486, -0.0010], atol=5e-5), "one-step seed-62 envelope")
+    need(np.allclose([cell.plugin_env_lower, cell.plugin_env_upper], [-0.0486, -0.0017], atol=5e-5), "plug-in seed-62 envelope")
+    simulation = pd.read_csv(ROOT / "results/onestep/simulation_summary.csv")
+    cov = simulation.groupby(["law", "scale", "estimator"]).outer_cov.first()
+    need(np.isclose(cov[("A", "nsclc_scale", "plug-in")], .863) and np.isclose(cov[("A", "nsclc_scale", "one-step")], .844), "one-step NSCLC-scale coverage")
+    need(np.isclose(cov[("B", "rotterdam_gbsg_scale", "plug-in")], .957) and np.isclose(cov[("B", "rotterdam_gbsg_scale", "one-step")], .957), "one-step Rotterdam-scale coverage")
+    need((simulation.n_valid == 1000).all(), "one-step simulation replications")
+    kappa = pd.read_csv(ROOT / "results/scalar_diagnostics/web_table_1.csv")
+    need(len(kappa) == 12 and (kappa.width_ratio - kappa.kappa).abs().max() < .002, "Web Table 1 kappa diagnostic")
+    seeds = json.loads((ROOT / "code/inference/archived_bootstrap_seeds.json").read_text(encoding="utf-8"))["seeds"]
+    need(len(seeds) == 20, "archived bootstrap seeds")
+    for stem in ("Figure_1", "Figure_2", "Figure_3", "Figure_4", "Web_Figure_1", "Web_Figure_2"):
+        for extension in ("pdf", "png", "tiff"):
+            path = ROOT / "figures" / "biometrics" / f"{stem}.{extension}"
+            need(path.is_file() and path.stat().st_size > 1000, f"missing {path}")
+    need(len(list((ROOT / "tables" / "biometrics").glob("*.csv"))) == 3, "Biometrics web tables")
+    checks.append("v1.2.0 one-step, scalar-diagnostic, and Biometrics artwork outputs")
+
     for stem in ("Figure_1", "Figure_2", "Figure_3", "Figure_4", "Figure_S1", "Figure_S2"):
         for extension in ("pdf", "eps", "png", "tiff"):
             path = ROOT / "figures" / f"{stem}.{extension}"

@@ -1,0 +1,9 @@
+Law,Scale,Estimator,Bias x1e3 min,Bias x1e3 max,SD x1e3 min,SD x1e3 max,RMSE x1e3 min,RMSE x1e3 max,Outer coverage,Wilson lower,Wilson upper,Mean envelope width at gamma=0.2 x1e3,Replications
+A,nsclc_scale,plug-in,1.9,12.2,26.9,29.8,27.0,32.2,0.863,0.84,0.883,130.3,1000
+A,nsclc_scale,one-step,1.8,13.8,28.5,32.0,28.5,34.8,0.844,0.82,0.865,134.9,1000
+B,nsclc_scale,plug-in,3.8,13.5,27.4,30.1,27.6,33.0,0.86,0.837,0.88,131.7,1000
+B,nsclc_scale,one-step,2.8,13.9,29.3,32.0,29.4,34.9,0.847,0.823,0.868,137.0,1000
+A,rotterdam_gbsg_scale,plug-in,-0.3,1.0,8.2,8.9,8.2,8.9,0.942,0.926,0.955,54.4,1000
+A,rotterdam_gbsg_scale,one-step,-0.3,1.1,8.5,9.2,8.5,9.2,0.949,0.934,0.961,55.9,1000
+B,rotterdam_gbsg_scale,plug-in,1.2,2.2,7.8,8.2,7.9,8.4,0.957,0.943,0.968,54.2,1000
+B,rotterdam_gbsg_scale,one-step,0.1,1.2,8.1,8.6,8.2,8.6,0.957,0.943,0.968,55.6,1000
