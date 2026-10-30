@@ -6,9 +6,11 @@
 | Application-scale comparator | `results/simulations/application_scale_comparator.csv` | `code/simulations/application_scale_comparator/run_all.py` |
 | Decision-regime study | `results/simulations/decision_regime/*.json` | `code/simulations/decision_regime/run_decision_regime.py` |
 | Primary-implementation coverage | `results/simulations/primary_implementation_coverage.csv` | `code/simulations/primary_implementation_coverage/` |
+| Coverage factorial (Web Table 8) | `results/simulations/coverage_factorial/` | `code/simulations/coverage_factorial/run_coverage_factorial.py` |
 | NSCLC horizon sensitivity | `results/nsclc/horizon_sensitivity.csv` | `code/nsclc/run_horizon_sensitivity.py` (restricted inputs required) |
 | NSCLC outcome-free evaluation | `results/nsclc/outcome_free_evaluation.csv` | `code/nsclc/run_outcome_free_evaluation.py` (restricted inputs required; synthetic fixture public) |
 | Rotterdam–GBSG supporting analysis | `results/applications/direct_vs_separate.csv` | `code/rotterdam_gbsg/run_public_pipeline.py` |
+| Rotterdam–GBSG robustness values (Web Table 15 Notes) | `results/applications/robustness_direct_vs_separate.csv` | `code/rotterdam_gbsg/05_robustness_values.py` (after `run_public_pipeline.py`) |
 | One-step simulation (Web Table 16) | `results/onestep/simulation_summary.csv`, `results/onestep/simulation_replicates/`, `results/onestep/population_limit_bias.json` | `code/onestep/run_onestep_simulation.py`, `code/onestep/population_limit_bias.py` |
 | One-step applications (Web Table 17) | `results/onestep/applications.csv` | `code/onestep/run_onestep_applications.py` (NSCLC rows: restricted inputs) |
 | Scalar diagnostic κ and robustness values (Web Table 1) | `results/scalar_diagnostics/web_table_1.csv` | `code/scalar_diagnostics/run_scalar_kappa_robustness.py` (NSCLC rows: restricted inputs) |
@@ -41,6 +43,15 @@ python code/onestep/run_onestep_applications.py --nsclc-input-root <root>  # res
 python code/scalar_diagnostics/run_scalar_kappa_robustness.py --rotterdam --nsclc-input-root <root>
 python build_biometrics_tables.py
 python build_biometrics_figures.py
+```
+
+## Coverage factorial and robustness values (v1.2.1)
+
+```bash
+python code/simulations/coverage_factorial/run_coverage_factorial.py        # 15 cells x 1,000 replications
+FACT_REPS=20 FACT_BOOT=29 FACT_OUT=_check/factorial python code/simulations/coverage_factorial/run_coverage_factorial.py   # smoke
+python code/simulations/coverage_factorial/plot_web_figure_3.py             # Web Figure 3
+python code/rotterdam_gbsg/05_robustness_values.py                           # after run_public_pipeline.py
 ```
 
 ## Full application-scale simulation

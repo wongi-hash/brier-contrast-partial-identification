@@ -124,6 +124,21 @@ def main():
     need(len(list((ROOT / "tables" / "biometrics").glob("*.csv"))) == 3, "Biometrics web tables")
     checks.append("v1.2.0 one-step, scalar-diagnostic, and Biometrics artwork outputs")
 
+    factorial = pd.read_csv(ROOT / "results/simulations/coverage_factorial/factorial_coverage_summary.csv")
+    need(len(factorial) == 15 and (factorial.reps_valid == 1000).all() and (factorial.fatal == 0).all(), "coverage factorial cells")
+    for n_s, cens, cov in ((114, .65, .859), (114, .38, .916), (300, .50, .938), (400, .65, .907), (516, .50, .950), (516, .38, .940)):
+        row = factorial[(factorial.nS == n_s) & np.isclose(factorial.target_cens, cens)]
+        need(len(row) == 1 and np.isclose(row.outer_envelope_coverage.iloc[0], cov), f"coverage factorial {n_s}/{cens}")
+    for path in sorted((ROOT / "results/simulations/coverage_factorial").glob("cell_*.json")):
+        records = json.loads(path.read_text(encoding="utf-8"))["records"]
+        need(len(records) == 1000, f"replicates in {path.name}")
+    robust = pd.read_csv(ROOT / "results/applications/robustness_direct_vs_separate.csv")
+    need(np.allclose(robust.robustness_direct, [.455, .335, .470, .285]) and np.allclose(robust.robustness_separate, [.265, .190, .250, .150]), "robustness values")
+    for extension in ("pdf", "png", "tiff"):
+        path = ROOT / "figures" / "biometrics" / f"Web_Figure_3.{extension}"
+        need(path.is_file() and path.stat().st_size > 1000, f"missing {path}")
+    checks.append("v1.2.1 coverage factorial, Web Figure 3, and robustness values")
+
     for stem in ("Figure_1", "Figure_2", "Figure_3", "Figure_4", "Figure_S1", "Figure_S2"):
         for extension in ("pdf", "eps", "png", "tiff"):
             path = ROOT / "figures" / f"{stem}.{extension}"

@@ -5,20 +5,20 @@ set of tracked or unignored files that Git would include. `MANIFEST.md` and
 `SHA256SUMS.txt` are excluded from their own hash input. Ignored local smoke
 outputs, public-data working files, restricted inputs, and `.git/` are absent.
 
-Intended public files hashed: **144**.
+Intended public files hashed: **169**.
 
 | SHA-256 | Bytes | Relative path |
 |---|---:|---|
 | `f17bdb0bbd1df417d32b476302913409cafc2a9d55e672856e757dcbdf4ed5bb` | 411 | `.gitattributes` |
 | `04e1849db8135b313a31687fc6e925917c75ab98dc58c4402eb2c1e8bb0ba1b5` | 1349 | `.gitignore` |
-| `2048c503f4bb2b6b13bf9a37c34367f39966fe16df82daa99a05e50cc8bdcd13` | 3475 | `BIOMETRICS_NUMBERING.md` |
+| `2e86c92d561926a87fafdcfeaba53298d318c559a0a0d75cb9c25579bb848840` | 4003 | `BIOMETRICS_NUMBERING.md` |
 | `1f7c8f9d232a55be6c144fe4d2a1ab0dbd0ea9152f9e73c3d25562410c3faa65` | 6334 | `build_biometrics_figures.py` |
 | `51489be99e91631c283a02d0ff06770fb69d97e10c88f81374fe7fa8eaab5f4c` | 4246 | `build_biometrics_tables.py` |
 | `de6c0b938b05a5c93001453e6dff9095ae21679bbeda52382fe5f4cebc4da3f8` | 26490 | `build_figures.py` |
 | `e842472b2558f1785a603a0168dde1af001473a28867e5a8f9aea9b2e422e285` | 2522 | `build_release_manifest.py` |
 | `d5576a38f46ea9becbd0425b659989791f4f24677e4132cd26ba3b810c487f0b` | 1688 | `build_tables.py` |
-| `c655a128bfde482385d65b4d7f41723f7dd4eca5ec80d79183f4c35984ae9f15` | 2488 | `CHANGELOG.md` |
-| `3e9325e957abddd4646b15bfae5d9e44e95cfce05942b300eb0f240efae5a670` | 1126 | `CITATION.cff` |
+| `d9313c3946396cdde2cb1cdef2284a6a5b47819e4028433220d1f63ed02eddab` | 3381 | `CHANGELOG.md` |
+| `5a9837e28500b508b2a9326706fd49af1ee257031c83a2d581c6d2662ce81533` | 1126 | `CITATION.cff` |
 | `6403d05423401ed5a013c0f349f330900e790cbf9a0cf219d328bc57880d08f6` | 1641 | `code/inference/archived_bootstrap_seeds.json` |
 | `d1bff7854358742d05a9ff2bdcd9a74eb433450a7098286c3837bca622673dc4` | 11758 | `code/inference/direct_vs_separate.py` |
 | `48a75448d73d35de3c49c676725dd2261386a08d78d8200549f8c2cdcbae188f` | 987 | `code/nsclc/input_schema.md` |
@@ -35,6 +35,7 @@ Intended public files hashed: **144**.
 | `28096e2eb5516493ebb59a1e31533dc7adeae878bbd3421066fe337393c13a6d` | 3570 | `code/rotterdam_gbsg/02_run_outcome_free_evaluation.py` |
 | `3feeab6213fe0fccf02cec9caedfb87c836651dd5d1f2bf1987b6ba1d304fd6f` | 3485 | `code/rotterdam_gbsg/03_run_retrospective_outcome_comparison.py` |
 | `80bef3363ba126fccf8968d2d761f1b4bbf00cde819d8d864255ebe9fe4d9b96` | 2314 | `code/rotterdam_gbsg/04_compare_direct_and_separate.py` |
+| `2cbed66c983758b6a35916da17794eb85d3848b7312134a40918434abd31fdf6` | 3065 | `code/rotterdam_gbsg/05_robustness_values.py` |
 | `464d1ea027aab90f9ff3127a1f7b6f21431807dbd1b24bf67d3b2ce5bcab44a1` | 12645 | `code/rotterdam_gbsg/common.py` |
 | `182de371613fc67f6d8a0ee4d20c24739eca562c294acb60bfbbb0d46aae6a73` | 1041 | `code/rotterdam_gbsg/README.md` |
 | `4c08d417d655f43197ee6371e824b827c9b65ebf63daa8bb6ce8e47290a40ff7` | 1429 | `code/rotterdam_gbsg/run_public_pipeline.py` |
@@ -44,6 +45,9 @@ Intended public files hashed: **144**.
 | `afec726eeb9074ea6556275416ce1ff045871395116e48a0d1911ea1b803b00b` | 2686 | `code/simulations/application_scale_comparator/run_all.py` |
 | `0f333185572c4661a1000cfd7cc40b6b697b89d78c275ad1671e9aee75db7cae` | 3106 | `code/simulations/application_scale_comparator/run_candidate_superior_mirror.py` |
 | `9ae6fc7643cdfcfc515b4fa9ec64c80dc114d67e429e30a52a10520b534f8bee` | 15822 | `code/simulations/application_scale_comparator/run_comparator.py` |
+| `b2d90944c155c6aef552756a52ad53a4aa081eee26c9cefbad6ca1bca8af4fa2` | 2723 | `code/simulations/coverage_factorial/plot_web_figure_3.py` |
+| `7b751e1da52fba1a1baac0b624fe88a00ca6328a4be224362aed25c66f6d43bc` | 1048 | `code/simulations/coverage_factorial/PROTOCOL.md` |
+| `76d003352752334b8f34af1ce35b4fe04e7c0dda8aa98904c2b9e6706cd18b33` | 10739 | `code/simulations/coverage_factorial/run_coverage_factorial.py` |
 | `a76848421d89a2376993028efd5e9cecfcd674cc7ab9788fc48e62cc0f71c034` | 1059 | `code/simulations/decision_regime/configuration.json` |
 | `e4e96995d1bda37e06b4a6155b648e927870463ac4767d6c6b9cac78f952220b` | 13215 | `code/simulations/decision_regime/run_decision_regime.py` |
 | `a997ca6d36e930aa740e3baf4aacec3d658199acf2963ce36ea78e5dbbca09e9` | 1354 | `code/simulations/generate_controlled_geometry.py` |
@@ -75,6 +79,9 @@ Intended public files hashed: **144**.
 | `580fe27cb255db63eaaa80c9852a378be500d07e51a1925d7332efac860130fb` | 26794 | `figures/biometrics/Web_Figure_2.pdf` |
 | `fa76f31d9a744aeb0890b967af8069665d1c7e1029f996d3d7dccdf93b30e76a` | 348490 | `figures/biometrics/Web_Figure_2.png` |
 | `f2c81900c369c69f08f3e3d46f4f7868863735d85baf732d60d8e1252bb12ba5` | 1866072 | `figures/biometrics/Web_Figure_2.tiff` |
+| `73d7e0d4b47508edd0cf36bb17b2498b245b07a95b156301f4881f9138faaf38` | 27531 | `figures/biometrics/Web_Figure_3.pdf` |
+| `cf3ba3038af8b41353d2320f75dccb147da33eec207db791102aad3325b16a18` | 319743 | `figures/biometrics/Web_Figure_3.png` |
+| `95bf9681212442e0d056c5f24ac40c371ffc0d856a243645837a4ad94c04a18f` | 1044774 | `figures/biometrics/Web_Figure_3.tiff` |
 | `8adde16e8451963f4edd54791573afb159ce2f445c789bdcf8b24589d3f2bd42` | 39714 | `figures/Figure_1.eps` |
 | `3b20d55ea78631ee28db1bb70bcc0be507f32f6223eb7975416d309d6808a397` | 78994 | `figures/Figure_1.pdf` |
 | `b36776d35415ccd51bb0eb4b6fe35974667e19443924183adadb5c216045829e` | 582656 | `figures/Figure_1.png` |
@@ -100,10 +107,11 @@ Intended public files hashed: **144**.
 | `0d3f9b276b040477a23983280641545785057c0acab7bbc01098ddb62a858157` | 248742 | `figures/Figure_S2.png` |
 | `227d254f1e198af85692d5a4f8cc4faa8da234e8e4698f42c0846b632c593da9` | 1705718 | `figures/Figure_S2.tiff` |
 | `2c2d7b37b037c060065d9dd9d6a2dfb02871927737ade0cc3be67a6eb5fa6a75` | 1123 | `LICENSE` |
-| `19c92d1b58f8d13f1c9366f95070bf567625d1b5f89c5d750a381ce1ecb6089e` | 7336 | `README.md` |
+| `516f448f104e6ab412d7947106c16a93a748a1819ae948f397cc6d428c39c6c8` | 7470 | `README.md` |
 | `5fc80e10ad277ffcb90d90149ee98025fb2f485dee659249d808a6bdbc101eac` | 254 | `requirements-locked-py38.txt` |
 | `9260cb36e3a60e1e62d109b270151c0e79fbbd5e044d3c720c864d65a235efc9` | 295 | `requirements.txt` |
 | `befba9fef622d1a582b8456cfafd48d49c0de8cf71800c92091df038a811d9ac` | 51676 | `results/applications/direct_vs_separate.csv` |
+| `5d4b8bcbfb455333c31068ecc49e4822740137ae27f417e8b255a5eb1b207e66` | 126 | `results/applications/robustness_direct_vs_separate.csv` |
 | `62ed941856dea60ca8e63a865ac0c006c70ecf9eee482f253dc43b41900475dc` | 88422 | `results/nsclc/horizon_sensitivity.csv` |
 | `a99cab23d1fb4fb826a0be4271638e622d1260818cf77f771181256e7a539e43` | 731 | `results/nsclc/manifest.json` |
 | `07c480cc210742fb33a426f752475087c063c3e94e5dac184739d53698343c52` | 41214 | `results/nsclc/outcome_free_evaluation.csv` |
@@ -117,6 +125,23 @@ Intended public files hashed: **144**.
 | `4b68a62fe055f26e3f0bb51413231e403a3fb6d0233e5a4b3545b8dd4ed36de5` | 1740 | `results/scalar_diagnostics/web_table_1.csv` |
 | `0c8e4ba2439fdec7b5bd941e188d566d2cd91f3a6723320d485cc19d7057fc42` | 94434 | `results/simulations/application_scale_comparator.csv` |
 | `1a0ca6d46fd384618dad21baae4834e618b37eec8355c2ae2f24cdde4d9b8741` | 438 | `results/simulations/controlled_geometry.csv` |
+| `8cdc1f93baaa449cf433da5fdd790d236f66c421f1fc7596ae16d6ead91f5ab0` | 81941 | `results/simulations/coverage_factorial/cell_114_38.json` |
+| `9399153c4317c5cd857409fa0dab3b268b658064f45b485fb7d77bb6a257d8a2` | 80592 | `results/simulations/coverage_factorial/cell_114_50.json` |
+| `2377136444511570cc603b6ef464f533a8d4d5e4977346e200f6cc65fe22ae61` | 81543 | `results/simulations/coverage_factorial/cell_114_65.json` |
+| `926ca9f5823f5d5749352ab2371dd2dd975e9e881a22a236eb906b6071c61d12` | 73139 | `results/simulations/coverage_factorial/cell_200_38.json` |
+| `37713f8df01eccf39a49fd806bd9658e40111952d72f222ad03d42026c2123b5` | 71618 | `results/simulations/coverage_factorial/cell_200_50.json` |
+| `fbb8f8cd83537d53f9e8c249a2ab579c6b2dc26b4abf613507215da6e41c7257` | 71618 | `results/simulations/coverage_factorial/cell_200_65.json` |
+| `62fe36e7e4a20032e7df7ee7c58897388bfaecf302343a8622ab477832e07300` | 78811 | `results/simulations/coverage_factorial/cell_300_38.json` |
+| `3513eb43a709a0d23e801546655da62432154c1a75f8d8c88f16e42d94b1c4b5` | 77622 | `results/simulations/coverage_factorial/cell_300_50.json` |
+| `569db88a83956a1c87717f45284c7f8ab4e25a26fc14e8e7b2d2840412211417` | 78755 | `results/simulations/coverage_factorial/cell_300_65.json` |
+| `d64b81ef83b6411fb42d3c8f4c58ddb6d6ed1d3bbd63403a45587083594b79f6` | 75664 | `results/simulations/coverage_factorial/cell_400_38.json` |
+| `89daba0d05c1a9f67494d4f9161d7aa732af832742f50ca627b3acb590fe9cee` | 73442 | `results/simulations/coverage_factorial/cell_400_50.json` |
+| `7e498afe9dd5112df53177681405e67407654e8e95ff3c08f45c017119824c8b` | 71827 | `results/simulations/coverage_factorial/cell_400_65.json` |
+| `b925a233e68c48a5d044ef49c18823630963add73baf86e20e6aacc913c4d956` | 82028 | `results/simulations/coverage_factorial/cell_516_38.json` |
+| `2ed550944769a10bc867453969ca5c2aac04ab7886c34fb9e9c0df5ef3aec6d5` | 81147 | `results/simulations/coverage_factorial/cell_516_50.json` |
+| `8a22325518b9253b2a3a3113c8f63f68480fe863f8532ef12d90460d6db8742b` | 81567 | `results/simulations/coverage_factorial/cell_516_65.json` |
+| `86c156e1df0d8a337b9c806da55e9a63e8a231630d7a0084a0667b0e69c2d413` | 984 | `results/simulations/coverage_factorial/factorial_coverage_summary.csv` |
+| `2b2adf69677ef9c2b4d1f5aa3c6acc0b1fa04dfb4941fe56398dbcf37302dad8` | 824 | `results/simulations/coverage_factorial/MANIFEST.json` |
 | `5b3e527d576e13091cf0f560522521d7e7822e86f18265c31411d92cf657d48c` | 750 | `results/simulations/decision_regime/ambiguous_conditional.json` |
 | `9378ef2bbc56123d287e4983eb179473d8cca873bc8980cb489189cab884e1f7` | 747 | `results/simulations/decision_regime/ambiguous_marginal.json` |
 | `80f87d0a7d6296b5dd66e54fd327458ce16d4be4717af613dcc32b0b53aab1e7` | 768 | `results/simulations/decision_regime/candidate_superior_conditional.json` |
@@ -134,7 +159,7 @@ Intended public files hashed: **144**.
 | `19a991b5e3106bac8b2683cbe0d474993ba06d4af5aab05471c25b6e5a574c10` | 660 | `results/simulations/primary_implementation_execution.json` |
 | `3eb40c5165b560599e14510ddf6680a266302f78ad0ce697078d568a7bd36676` | 584 | `results/simulations/rotterdam_gbsg_scale_coverage.csv` |
 | `e814dae0fa1246588434ee1e7cc7f14335225e14c4e3818e6e489a9561bcd41b` | 563 | `results/simulations/rotterdam_gbsg_scale_manifest.json` |
-| `0ca5f4958afe896178214b521eef18b9dbce0e1632c6ca69640887ec850f3a45` | 4132 | `RUN_ORDER.md` |
+| `c5e81ec6313eb5bde3e227af5abbde4b769e27a14af5fcd5cb10fa2a08f0a20a` | 4984 | `RUN_ORDER.md` |
 | `ffdf0101e78d680629ba439c151dcdfcd30356f387dd52a93ed15797d9100c3c` | 5709 | `synthetic_fixture/expected_output/gamma_sweep_direct_separate.csv` |
 | `f44343434b9e873a95727c21edf934beb634a0d72630ab206c1752f9b3f19555` | 3205 | `synthetic_fixture/expected_output/MANIFEST.json` |
 | `dd5729dd79f55c72469553acd72d41d297ef5921c06ffd6f6d75cccf49023f12` | 7289 | `synthetic_fixture/nsclc/pet_radiomic_candidate/seed42/calibration_Stanford.csv` |
@@ -150,9 +175,9 @@ Intended public files hashed: **144**.
 | `f5d3bbbd498cafaddf0aa1cafc89fc23199450d8cbf4f74cdbf0abca4ff39ff2` | 10847 | `tables/Table_S4_Rotterdam_GBSG_decisions.csv` |
 | `361f73e6d3ffdde8623f587b8b6944d1e2718bf88ce07356ba172469d007bf5d` | 2694 | `tables/Table_S5_decision_regimes.csv` |
 | `480e01e69ddb37ef5454257f4567d0eb750387fc57f0bec0861c6c08becc7dbd` | 589 | `tables/Table_S9_primary_implementation_coverage.csv` |
-| `f11fab355c7c73f40826ec814d94ca1f261b1f7f36a7f51a54edc96d134b0d1a` | 9922 | `validate_release.py` |
+| `b39b124143bf4902138f83283e79968ea872e06fa2be693c7f19d241aeae30dc` | 11284 | `validate_release.py` |
 | `02327826734c8de989338d046317c9481f7ae08ec08474438c986634cafc3733` | 4617 | `VALIDATION_REPORT.md` |
-| `fb8a3c08b8482325b9cc1db60986b9d6c0b602644b91168a1bbe8a39fd6af191` | 622 | `VALIDATION_RESULTS.json` |
+| `8baea454faa396bb9c30d99f49afcec59d1222969a80285ce23f5b964a29abea` | 693 | `VALIDATION_RESULTS.json` |
 
 No institutional patient-level inputs or raw images are intentionally included.
 No local executable path, user directory, or institutional filesystem path

@@ -1,0 +1,5 @@
+seed,robustness_direct,robustness_separate,ratio
+42,0.455,0.265,1.717
+52,0.335,0.19,1.763
+62,0.47,0.25,1.88
+72,0.285,0.15,1.9

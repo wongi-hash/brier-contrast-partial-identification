@@ -4,7 +4,7 @@ Reproducibility materials for **Sharp Partial Identification for Survival Model
 Comparison Without Target Outcomes** (submitted to *Biometrics*; earlier working
 title: *Comparing Survival Prediction Models without Target Outcomes: Sharp
 Partial Identification of Direct Brier-Risk Contrasts under Conditional Outcome
-Shift*). Version 1.2.0 adds the analyses introduced for the Biometrics
+Shift*). Versions 1.2.0 and 1.2.1 add the analyses introduced for the Biometrics
 manuscript; `BIOMETRICS_NUMBERING.md` maps every Biometrics figure and table to
 its committed file and generator.
 
@@ -21,9 +21,10 @@ individual predictions, or medical images.
 | Controlled-geometry illustration | `code/simulations/generate_controlled_geometry.py` |
 | NSCLC application-scale comparator and mirror study | `code/simulations/application_scale_comparator/` |
 | Targeted primary-implementation stress study | `code/simulations/primary_implementation_coverage/` |
+| Source-size by censoring coverage factorial (Web Table 8) | `code/simulations/coverage_factorial/` |
 | Decision-regime study | `code/simulations/decision_regime/` |
 | NSCLC outcome-free evaluation | `code/nsclc/` |
-| Rotterdam–GBSG supporting survival analysis | `code/rotterdam_gbsg/` |
+| Rotterdam–GBSG supporting survival analysis | `code/rotterdam_gbsg/` (robustness values: `05_robustness_values.py`) |
 | Figures and tables | `build_figures.py`, `build_tables.py` |
 | One-step endpoint estimator (Web Appendix A.7; Web Tables 16–17) | `code/onestep/` |
 | Scalar versus profile-varying diagnostic κ (Web Table 1) | `code/scalar_diagnostics/` |
@@ -147,6 +148,4 @@ See `RUN_ORDER.md` for code-to-result traceability and
 - Version 1.0.0 DOI: https://doi.org/10.5281/zenodo.22807125
 - Version 1.1.0 DOI: https://doi.org/10.5281/zenodo.23028694
 - Version 1.2.0 DOI: https://doi.org/10.5281/zenodo.23750710
-
-The next version will be published only after final validation and explicit
-approval.
+- Version 1.2.1 DOI: https://doi.org/10.5281/zenodo.23789365

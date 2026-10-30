@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.2.1 — 2026-10-30
+
+- added the source-size by censoring coverage factorial (Web Table 8):
+  `code/simulations/coverage_factorial/run_coverage_factorial.py`, its
+  protocol, and replicate records for all 15 cells under
+  `results/simulations/coverage_factorial/`; the original n_S = 114 and 516
+  cells are now archived, and n_S = 200, 300, 400 were added under the
+  protocol in `code/simulations/coverage_factorial/PROTOCOL.md`; Web Figure 3
+  (`plot_web_figure_3.py`, `figures/biometrics/Web_Figure_3.*`) plots all 15 cells;
+- added `code/rotterdam_gbsg/05_robustness_values.py` and
+  `results/applications/robustness_direct_vs_separate.csv` (robustness values
+  under direct identification and separate subtraction; Web Table 15 Notes);
+- `CITATION.cff` and the archive metadata now record the exact v1.2.1 DOI
+  (`10.5281/zenodo.23789365`); no previously committed result changed.
+
 ## v1.2.0 — 2026-10-29
 
 - added the one-step endpoint estimator (Web Appendix A.7): core routines,

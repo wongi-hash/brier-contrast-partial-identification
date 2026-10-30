@@ -33,11 +33,14 @@ Tables under `tables/biometrics/` use CAND, REF, and DEFER.
 | Biometrics item | Committed file | Generator / source |
 |---|---|---|
 | Web Table 1 (scalar vs profile-varying, κ, robustness values) | `tables/biometrics/Web_Table_01_scalar_vs_profile_varying.csv`, `results/scalar_diagnostics/web_table_1.csv` | `code/scalar_diagnostics/run_scalar_kappa_robustness.py` (NSCLC rows: restricted inputs) |
-| Web Tables 3–8 (simulations) | `results/simulations/` | `code/simulations/` |
+| Web Tables 3–7 (simulations) | `results/simulations/` | `code/simulations/` |
+| Web Table 8 (coverage factorial, 15 cells) | `results/simulations/coverage_factorial/factorial_coverage_summary.csv`, `results/simulations/coverage_factorial/cell_*.json` | `code/simulations/coverage_factorial/run_coverage_factorial.py` |
 | Web Tables 10–14 (NSCLC details) | `results/nsclc/` | restricted-input analyses; aggregate outputs only |
 | Web Table 15 (Rotterdam–GBSG, all cells) | `tables/Table_S4_Rotterdam_GBSG_decisions.csv` | `code/rotterdam_gbsg/run_public_pipeline.py` |
+| Web Table 15 Notes (robustness values) | `results/applications/robustness_direct_vs_separate.csv` | `code/rotterdam_gbsg/05_robustness_values.py` |
 | Web Table 16 (plug-in vs one-step, simulation) | `tables/biometrics/Web_Table_16_onestep_simulation.csv`, `results/onestep/simulation_summary.csv`, `results/onestep/simulation_replicates/`, `results/onestep/population_limit_bias.json` | `code/onestep/run_onestep_simulation.py`, `code/onestep/population_limit_bias.py` |
 | Web Table 17 (plug-in vs one-step, applications) | `tables/biometrics/Web_Table_17_onestep_applications.csv`, `results/onestep/applications.csv` | `code/onestep/run_onestep_applications.py` (NSCLC rows: restricted inputs) |
 | Web Figure 1 (simulation summary) | `figures/biometrics/Web_Figure_1.*` | same aggregates as `build_figures.py`, Figure 3 section (typography of the submitted artwork differs slightly) |
+| Web Figure 3 (coverage factorial) | `figures/biometrics/Web_Figure_3.*` | `code/simulations/coverage_factorial/plot_web_figure_3.py` |
 | Web Figure 2 (decision-regime frequencies) | `figures/biometrics/Web_Figure_2.*` | `build_biometrics_figures.py`; `results/simulations/decision_regime/` |
 | Web Appendix A.7 (one-step estimator) | — | `code/onestep/`, `code/onestep/PROTOCOL.md` |
