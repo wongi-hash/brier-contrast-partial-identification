@@ -5,20 +5,20 @@ set of tracked or unignored files that Git would include. `MANIFEST.md` and
 `SHA256SUMS.txt` are excluded from their own hash input. Ignored local smoke
 outputs, public-data working files, restricted inputs, and `.git/` are absent.
 
-Intended public files hashed: **169**.
+Intended public files hashed: **173**.
 
 | SHA-256 | Bytes | Relative path |
 |---|---:|---|
 | `f17bdb0bbd1df417d32b476302913409cafc2a9d55e672856e757dcbdf4ed5bb` | 411 | `.gitattributes` |
 | `04e1849db8135b313a31687fc6e925917c75ab98dc58c4402eb2c1e8bb0ba1b5` | 1349 | `.gitignore` |
-| `2e86c92d561926a87fafdcfeaba53298d318c559a0a0d75cb9c25579bb848840` | 4003 | `BIOMETRICS_NUMBERING.md` |
+| `87c30619f8279afaf7c70d84179a2065e6e596d172a5b3b4d11069b70a66c5dd` | 4174 | `BIOMETRICS_NUMBERING.md` |
 | `1f7c8f9d232a55be6c144fe4d2a1ab0dbd0ea9152f9e73c3d25562410c3faa65` | 6334 | `build_biometrics_figures.py` |
 | `51489be99e91631c283a02d0ff06770fb69d97e10c88f81374fe7fa8eaab5f4c` | 4246 | `build_biometrics_tables.py` |
 | `de6c0b938b05a5c93001453e6dff9095ae21679bbeda52382fe5f4cebc4da3f8` | 26490 | `build_figures.py` |
 | `e842472b2558f1785a603a0168dde1af001473a28867e5a8f9aea9b2e422e285` | 2522 | `build_release_manifest.py` |
 | `d5576a38f46ea9becbd0425b659989791f4f24677e4132cd26ba3b810c487f0b` | 1688 | `build_tables.py` |
-| `d9313c3946396cdde2cb1cdef2284a6a5b47819e4028433220d1f63ed02eddab` | 3381 | `CHANGELOG.md` |
-| `5a9837e28500b508b2a9326706fd49af1ee257031c83a2d581c6d2662ce81533` | 1126 | `CITATION.cff` |
+| `9d7acec739c902709bd9d18c94b974cd2f9564e629b0c5c5eff36c2d0f7d3896` | 4099 | `CHANGELOG.md` |
+| `a844a3fc278c70e24406e3e2347f4402daa718074ff2dba04e58ce3672f64fdb` | 1126 | `CITATION.cff` |
 | `6403d05423401ed5a013c0f349f330900e790cbf9a0cf219d328bc57880d08f6` | 1641 | `code/inference/archived_bootstrap_seeds.json` |
 | `d1bff7854358742d05a9ff2bdcd9a74eb433450a7098286c3837bca622673dc4` | 11758 | `code/inference/direct_vs_separate.py` |
 | `48a75448d73d35de3c49c676725dd2261386a08d78d8200549f8c2cdcbae188f` | 987 | `code/nsclc/input_schema.md` |
@@ -45,6 +45,7 @@ Intended public files hashed: **169**.
 | `afec726eeb9074ea6556275416ce1ff045871395116e48a0d1911ea1b803b00b` | 2686 | `code/simulations/application_scale_comparator/run_all.py` |
 | `0f333185572c4661a1000cfd7cc40b6b697b89d78c275ad1671e9aee75db7cae` | 3106 | `code/simulations/application_scale_comparator/run_candidate_superior_mirror.py` |
 | `9ae6fc7643cdfcfc515b4fa9ec64c80dc114d67e429e30a52a10520b534f8bee` | 15822 | `code/simulations/application_scale_comparator/run_comparator.py` |
+| `c0ab373567f9e799719ebae8d42eab6749bb88b8f390f12d7a9fa8bb3c3be586` | 7071 | `code/simulations/coverage_factorial/diagnose_coverage.py` |
 | `b2d90944c155c6aef552756a52ad53a4aa081eee26c9cefbad6ca1bca8af4fa2` | 2723 | `code/simulations/coverage_factorial/plot_web_figure_3.py` |
 | `7b751e1da52fba1a1baac0b624fe88a00ca6328a4be224362aed25c66f6d43bc` | 1048 | `code/simulations/coverage_factorial/PROTOCOL.md` |
 | `76d003352752334b8f34af1ce35b4fe04e7c0dda8aa98904c2b9e6706cd18b33` | 10739 | `code/simulations/coverage_factorial/run_coverage_factorial.py` |
@@ -107,7 +108,7 @@ Intended public files hashed: **169**.
 | `0d3f9b276b040477a23983280641545785057c0acab7bbc01098ddb62a858157` | 248742 | `figures/Figure_S2.png` |
 | `227d254f1e198af85692d5a4f8cc4faa8da234e8e4698f42c0846b632c593da9` | 1705718 | `figures/Figure_S2.tiff` |
 | `2c2d7b37b037c060065d9dd9d6a2dfb02871927737ade0cc3be67a6eb5fa6a75` | 1123 | `LICENSE` |
-| `516f448f104e6ab412d7947106c16a93a748a1819ae948f397cc6d428c39c6c8` | 7470 | `README.md` |
+| `876c2ae9e7064f12a586041822c69aa1f235c8da621bea7edead940d12d9a7bb` | 7647 | `README.md` |
 | `5fc80e10ad277ffcb90d90149ee98025fb2f485dee659249d808a6bdbc101eac` | 254 | `requirements-locked-py38.txt` |
 | `9260cb36e3a60e1e62d109b270151c0e79fbbd5e044d3c720c864d65a235efc9` | 295 | `requirements.txt` |
 | `befba9fef622d1a582b8456cfafd48d49c0de8cf71800c92091df038a811d9ac` | 51676 | `results/applications/direct_vs_separate.csv` |
@@ -140,6 +141,9 @@ Intended public files hashed: **169**.
 | `b925a233e68c48a5d044ef49c18823630963add73baf86e20e6aacc913c4d956` | 82028 | `results/simulations/coverage_factorial/cell_516_38.json` |
 | `2ed550944769a10bc867453969ca5c2aac04ab7886c34fb9e9c0df5ef3aec6d5` | 81147 | `results/simulations/coverage_factorial/cell_516_50.json` |
 | `8a22325518b9253b2a3a3113c8f63f68480fe863f8532ef12d90460d6db8742b` | 81567 | `results/simulations/coverage_factorial/cell_516_65.json` |
+| `69bf835fa51bce842ff3a398e68e26b0a75630006ccfee09c1f38104d4626ab2` | 4338 | `results/simulations/coverage_factorial/diagnosis/diagnosis_summary.json` |
+| `38fee20ffdd9faa52923fe569f90355f530f22a7bda6a5ac737bb9a36186767c` | 762180 | `results/simulations/coverage_factorial/diagnosis/replicates_114_65.jsonl` |
+| `68f32a32f4473f49aa737524350cd6f5e69a9a4d91d27fb34bfc5ffe4b85babd` | 765005 | `results/simulations/coverage_factorial/diagnosis/replicates_516_50.jsonl` |
 | `86c156e1df0d8a337b9c806da55e9a63e8a231630d7a0084a0667b0e69c2d413` | 984 | `results/simulations/coverage_factorial/factorial_coverage_summary.csv` |
 | `2b2adf69677ef9c2b4d1f5aa3c6acc0b1fa04dfb4941fe56398dbcf37302dad8` | 824 | `results/simulations/coverage_factorial/MANIFEST.json` |
 | `5b3e527d576e13091cf0f560522521d7e7822e86f18265c31411d92cf657d48c` | 750 | `results/simulations/decision_regime/ambiguous_conditional.json` |
@@ -159,7 +163,7 @@ Intended public files hashed: **169**.
 | `19a991b5e3106bac8b2683cbe0d474993ba06d4af5aab05471c25b6e5a574c10` | 660 | `results/simulations/primary_implementation_execution.json` |
 | `3eb40c5165b560599e14510ddf6680a266302f78ad0ce697078d568a7bd36676` | 584 | `results/simulations/rotterdam_gbsg_scale_coverage.csv` |
 | `e814dae0fa1246588434ee1e7cc7f14335225e14c4e3818e6e489a9561bcd41b` | 563 | `results/simulations/rotterdam_gbsg_scale_manifest.json` |
-| `c5e81ec6313eb5bde3e227af5abbde4b769e27a14af5fcd5cb10fa2a08f0a20a` | 4984 | `RUN_ORDER.md` |
+| `8478d86e2fd32b7cd6c3b9ca791ec0950cec861b86fb7f904b265982bb6f6604` | 5325 | `RUN_ORDER.md` |
 | `ffdf0101e78d680629ba439c151dcdfcd30356f387dd52a93ed15797d9100c3c` | 5709 | `synthetic_fixture/expected_output/gamma_sweep_direct_separate.csv` |
 | `f44343434b9e873a95727c21edf934beb634a0d72630ab206c1752f9b3f19555` | 3205 | `synthetic_fixture/expected_output/MANIFEST.json` |
 | `dd5729dd79f55c72469553acd72d41d297ef5921c06ffd6f6d75cccf49023f12` | 7289 | `synthetic_fixture/nsclc/pet_radiomic_candidate/seed42/calibration_Stanford.csv` |
@@ -175,9 +179,9 @@ Intended public files hashed: **169**.
 | `f5d3bbbd498cafaddf0aa1cafc89fc23199450d8cbf4f74cdbf0abca4ff39ff2` | 10847 | `tables/Table_S4_Rotterdam_GBSG_decisions.csv` |
 | `361f73e6d3ffdde8623f587b8b6944d1e2718bf88ce07356ba172469d007bf5d` | 2694 | `tables/Table_S5_decision_regimes.csv` |
 | `480e01e69ddb37ef5454257f4567d0eb750387fc57f0bec0861c6c08becc7dbd` | 589 | `tables/Table_S9_primary_implementation_coverage.csv` |
-| `b39b124143bf4902138f83283e79968ea872e06fa2be693c7f19d241aeae30dc` | 11284 | `validate_release.py` |
+| `3b311892a35f68f1707d33498387a889ded8a801bb9006d581371f6643dd6078` | 12453 | `validate_release.py` |
 | `02327826734c8de989338d046317c9481f7ae08ec08474438c986634cafc3733` | 4617 | `VALIDATION_REPORT.md` |
-| `8baea454faa396bb9c30d99f49afcec59d1222969a80285ce23f5b964a29abea` | 693 | `VALIDATION_RESULTS.json` |
+| `8682f230ee4747d55f1fd2a6940fc8918f50337eb97d952e1e20d19e1312b507` | 741 | `VALIDATION_RESULTS.json` |
 
 No institutional patient-level inputs or raw images are intentionally included.
 No local executable path, user directory, or institutional filesystem path

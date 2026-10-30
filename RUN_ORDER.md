@@ -7,6 +7,7 @@
 | Decision-regime study | `results/simulations/decision_regime/*.json` | `code/simulations/decision_regime/run_decision_regime.py` |
 | Primary-implementation coverage | `results/simulations/primary_implementation_coverage.csv` | `code/simulations/primary_implementation_coverage/` |
 | Coverage factorial (Web Table 8) | `results/simulations/coverage_factorial/` | `code/simulations/coverage_factorial/run_coverage_factorial.py` |
+| Coverage diagnosis (Web Appendix C.4) | `results/simulations/coverage_factorial/diagnosis/` | `code/simulations/coverage_factorial/diagnose_coverage.py` |
 | NSCLC horizon sensitivity | `results/nsclc/horizon_sensitivity.csv` | `code/nsclc/run_horizon_sensitivity.py` (restricted inputs required) |
 | NSCLC outcome-free evaluation | `results/nsclc/outcome_free_evaluation.csv` | `code/nsclc/run_outcome_free_evaluation.py` (restricted inputs required; synthetic fixture public) |
 | Rotterdam–GBSG supporting analysis | `results/applications/direct_vs_separate.csv` | `code/rotterdam_gbsg/run_public_pipeline.py` |
@@ -51,6 +52,8 @@ python build_biometrics_figures.py
 python code/simulations/coverage_factorial/run_coverage_factorial.py        # 15 cells x 1,000 replications
 FACT_REPS=20 FACT_BOOT=29 FACT_OUT=_check/factorial python code/simulations/coverage_factorial/run_coverage_factorial.py   # smoke
 python code/simulations/coverage_factorial/plot_web_figure_3.py             # Web Figure 3
+python code/simulations/coverage_factorial/diagnose_coverage.py run 114 65     # resumable; repeat for 516 50
+python code/simulations/coverage_factorial/diagnose_coverage.py summarize
 python code/rotterdam_gbsg/05_robustness_values.py                           # after run_public_pipeline.py
 ```
 

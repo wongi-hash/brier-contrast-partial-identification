@@ -139,6 +139,18 @@ def main():
         need(path.is_file() and path.stat().st_size > 1000, f"missing {path}")
     checks.append("v1.2.1 coverage factorial, Web Figure 3, and robustness values")
 
+    diag = json.loads((ROOT / "results/simulations/coverage_factorial/diagnosis/diagnosis_summary.json").read_text(encoding="utf-8"))
+    small, large = diag["114_65"], diag["516_50"]
+    need(small["n_rep"] == 1000 and large["n_rep"] == 1000, "diagnosis replications")
+    need(small["reproduces_stored_factorial_records"] and large["reproduces_stored_factorial_records"], "diagnosis reproduces factorial records")
+    need((small["misses_lower_only"], small["misses_upper_only"], small["misses_both"]) == (121, 20, 0), "diagnosis miss split 114/65")
+    need((large["misses_lower_only"], large["misses_upper_only"], large["misses_both"]) == (25, 25, 0), "diagnosis miss split 516/50")
+    need(np.isclose(small["coverage_mc_sd_in_place_of_bootstrap_se"], .944) and np.isclose(small["coverage_mc_bias_removed"], .887), "diagnosis counterfactual coverage")
+    for cell in ("114_65", "516_50"):
+        rows = (ROOT / f"results/simulations/coverage_factorial/diagnosis/replicates_{cell}.jsonl").read_text(encoding="utf-8").splitlines()
+        need(len(rows) == 1000, f"diagnosis replicate records {cell}")
+    checks.append("v1.2.3 finite-sample coverage diagnosis")
+
     for stem in ("Figure_1", "Figure_2", "Figure_3", "Figure_4", "Figure_S1", "Figure_S2"):
         for extension in ("pdf", "eps", "png", "tiff"):
             path = ROOT / "figures" / f"{stem}.{extension}"

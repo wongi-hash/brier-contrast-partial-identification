@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.2.3 — 2026-10-30
+
+- added the finite-sample coverage diagnosis of Web Appendix C.4:
+  `code/simulations/coverage_factorial/diagnose_coverage.py`, replicate
+  records for the factorial cells n_S = 114 with 65% censoring and
+  n_S = 516 with 50% censoring under
+  `results/simulations/coverage_factorial/diagnosis/`, and
+  `diagnosis_summary.json`. The diagnosis is exploratory, was added after the
+  factorial results were available, reuses the factorial seeds, and reproduces
+  the stored factorial envelopes and critical values exactly;
+- `CITATION.cff` and the archive metadata record the exact v1.2.3 DOI
+  (`10.5281/zenodo.23789365`); no previously committed result changed.
+- There is no v1.2.2 release.
+
 ## v1.2.1 — 2026-10-30
 
 - added the source-size by censoring coverage factorial (Web Table 8):

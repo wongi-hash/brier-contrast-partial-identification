@@ -34,6 +34,7 @@ Tables under `tables/biometrics/` use CAND, REF, and DEFER.
 |---|---|---|
 | Web Table 1 (scalar vs profile-varying, κ, robustness values) | `tables/biometrics/Web_Table_01_scalar_vs_profile_varying.csv`, `results/scalar_diagnostics/web_table_1.csv` | `code/scalar_diagnostics/run_scalar_kappa_robustness.py` (NSCLC rows: restricted inputs) |
 | Web Tables 3–7 (simulations) | `results/simulations/` | `code/simulations/` |
+| Web Appendix C.4 (finite-sample coverage diagnosis) | `results/simulations/coverage_factorial/diagnosis/` | `code/simulations/coverage_factorial/diagnose_coverage.py` |
 | Web Table 8 (coverage factorial, 15 cells) | `results/simulations/coverage_factorial/factorial_coverage_summary.csv`, `results/simulations/coverage_factorial/cell_*.json` | `code/simulations/coverage_factorial/run_coverage_factorial.py` |
 | Web Tables 10–14 (NSCLC details) | `results/nsclc/` | restricted-input analyses; aggregate outputs only |
 | Web Table 15 (Rotterdam–GBSG, all cells) | `tables/Table_S4_Rotterdam_GBSG_decisions.csv` | `code/rotterdam_gbsg/run_public_pipeline.py` |
