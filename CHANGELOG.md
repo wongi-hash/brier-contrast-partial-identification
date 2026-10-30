@@ -11,7 +11,7 @@
   factorial results were available, reuses the factorial seeds, and reproduces
   the stored factorial envelopes and critical values exactly;
 - `CITATION.cff` and the archive metadata record the exact v1.2.3 DOI
-  (`10.5281/zenodo.23789365`); no previously committed result changed.
+  (`10.5281/zenodo.23794202`); no previously committed result changed.
 - There is no v1.2.2 release.
 
 ## v1.2.1 — 2026-10-30

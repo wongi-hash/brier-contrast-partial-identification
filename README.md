@@ -150,4 +150,4 @@ See `RUN_ORDER.md` for code-to-result traceability and
 - Version 1.1.0 DOI: https://doi.org/10.5281/zenodo.23028694
 - Version 1.2.0 DOI: https://doi.org/10.5281/zenodo.23750710
 - Version 1.2.1 DOI: https://doi.org/10.5281/zenodo.23789365
-- Version 1.2.3 DOI: https://doi.org/10.5281/zenodo.23789365
+- Version 1.2.3 DOI: https://doi.org/10.5281/zenodo.23794202
